@@ -1,14 +1,25 @@
+const rootElement = document.querySelector('#root1');
+const root = ReactDOM.createRoot(rootElement);
 
 const update = () => {
-    // Javascript
-    const element2 = `
-        <h3>Javascript:</h3>
-        <form>
-            <input type="text"/>
-        </form>
-        <span>Time: ${new Date().toLocaleTimeString()}</span>
-    `;
-    document.querySelector('#root2').innerHTML = element2;
+    const element1 = React.createElement(
+        'div',
+        null,
+        React.createElement(
+            'form',
+            null,
+            React.createElement('input', {
+                type: 'text',
+            })
+        ),
+        React.createElement(
+            'span',
+            null,
+            'Time: ',
+            new Date().toLocaleTimeString()
+        )
+    );
+    root.render(element1);
 };
 
 setInterval(update, 1000);
