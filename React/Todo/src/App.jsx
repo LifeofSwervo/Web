@@ -1,9 +1,22 @@
+import { useState } from "react"
 import "./styles.css"
 
 
 export default function App() {
   const [newItem, setNewItem] = useState("")
-  setNewItem()
+  const [todos, setTodos] = useState([])
+
+  function handleSubmit(e) {
+    e.preventDefault()
+    
+    setTodos((currentTodos) => {
+      return [
+      ...currentTodos,
+      { id: crypto.randomUUID(), title: newItem, completed: false },
+      ]
+    })
+  }
+
 
   return (
     <> 
@@ -16,22 +29,16 @@ export default function App() {
       </form>
       <h1 className="header">Todo List</h1>
       <ul className="list">
-        <li>
+        {todos.map(todo => {
+          return <li>
           <label>
-            <input type="checkbox" />
-              Item 1 
+            <input type="checkbox" checked={todo.completed} />
+              {todo.title}
           </label>
           <button className="btn btn-danger">Delete</button>
         </li>
-        <li>
-          <label>
-            <input type="checkbox" />
-            Item 2
-          </label>
-          <button className="btn btn-danger">Delete</button>
-        </li>
+        })}
       </ul>
-
       <h1>Todo List</h1>
     </>
   )
