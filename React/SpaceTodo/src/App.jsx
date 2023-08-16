@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { NewTodoForm } from './NewTodoForm'
 import 'bootstrap/dist/css/bootstrap.css'
 
 export default function App() {
@@ -43,6 +42,7 @@ export default function App() {
 
   return (
     <>
+      <NewTodoForm onSubmit={addTodo} />
       <h1 className='header'>Todo List</h1>
     </>
   )
