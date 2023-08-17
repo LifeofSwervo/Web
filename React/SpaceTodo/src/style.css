@@ -4,10 +4,14 @@ body {
     max-width: 400px;
     padding: 1rem;
     margin: 0 auto;
+    z-index: 1;
 }
 
+canvas {
+    z-index: 2;
+    position: fixed;
 
-
+}
 
 .newItemForm {
     display: flex;
