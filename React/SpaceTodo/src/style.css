@@ -1,0 +1,56 @@
+body {
+    background: #0F0F0F;
+    color: hsl(200, 100%, 90%);
+    max-width: 400px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+
+
+
+.newItemForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.newItemForm label {
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.newItemForm input {
+    border-radius: 0.25em;
+    outline: none;
+    border: 1px solid hsl(0, 0%, 0%, 0.1);
+    padding: 0.25em 0.5em;
+}
+
+.newItemForm input:focus {
+    border: 1px solid hsl(0, 0%, 30%, 0.2);
+}
+
+.formRow {
+    gap: 0.1rem;
+}
+
+.btn {
+    border: 1px solid hsl(0, 100%, 100%, 0.1);
+    padding: 0.25em 0.25em;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn:hover
+.btn:focus-visible {
+    border: 1px solid hsl(0, 100%, 100%, 0.2);
+
+}
+
+.header {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
