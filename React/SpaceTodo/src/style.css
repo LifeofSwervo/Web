@@ -37,7 +37,7 @@ body {
 
 .btn {
     border: 1px solid hsl(0, 100%, 100%, 0.1);
-    padding: 0.25em 0.25em;
+    padding: 0.25em 0.5em;
     cursor: pointer;
     outline: none;
 }
@@ -48,9 +48,77 @@ body {
 
 }
 
+.btn.btnDanger {
+    background: hsl(0, 100%, 40%, 0.1);
+    border: 1px solid hsl(0, 100%, 40%);
+    color: hsl(0, 100%, 40%);
+}
+  
+.btn.btnDanger:hover,
+.btn.btnDanger:focus-visible {
+    background: hsl(0, 100%, 40%, 0.2);
+}
+
 .header {
     font-size: 1.5rem;
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
+    border-bottom: 1px solid white;
 }
 
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.list li {
+    gap: 0.5em;
+    align-items: center;
+    display: flex;
+}
+
+.list li label {
+    cursor: pointer;
+    align-items: center;
+    margin-right: 25px;
+    display: flex;
+}
+
+
+.list li input {
+    outline: none;
+    width: 0;
+    height: 0;
+    appearance: none;
+    pointer-events: none;
+    position: absolute;
+}
+
+.list li label::before {
+    content: "";
+    display: block;
+    width: 0.9rem;
+    height: 0.9rem;
+    background: hsl(200, 100%, 90%);
+    border-radius: 0.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.list li label:hover::before {
+    background: hsl(200, 100%, 80%);
+}
+  
+.list li:has(input:checked) label::before {
+    content: "✔";
+    background: hsl(200, 100%, 40%);
+    color: hsl(200, 100%, 90%);
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+  
+.list li:has(input:checked) label:hover::before {
+    background: hsl(200, 100%, 30%);
+}
