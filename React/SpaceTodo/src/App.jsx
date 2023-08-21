@@ -23,7 +23,7 @@ export default function App() {
     })
   }
 
-
+  // Updates completion of task
   function toggleTodo(id, completed) {
     setTodos(currentTodos => {
       return currentTodos.map(todo => {
