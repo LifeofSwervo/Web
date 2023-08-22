@@ -5,11 +5,12 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 export default function App() {
   const [todos, setTodos] = useState(() => {
-    const localValue = localStorage.getItem("ITEMS")
-    if (localValue == null) return []
-    return JSON.parse(localValue)
+    const localValue = localStorage.getItem("ITEMS") // Checking browser's storage for value under key "ITEMS" 
+    if (localValue == null) return [] // If "ITEMS" is not found, return empty array
+    return JSON.parse(localValue) // once found it is parsed as JSON
   })
 
+  // Synch todo state with browser's local storage (triggered upon "todos" state changing)
   useEffect(() => {
     localStorage.setItem("ITEMS", JSON.stringify(todos))
   }, [todos])
