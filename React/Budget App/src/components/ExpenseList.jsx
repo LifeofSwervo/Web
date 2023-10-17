@@ -1,20 +1,41 @@
 
+import { useContext, useEffect, useState } from "react";
 import ExpenseItem from "./ExpenseItem";
+import { AppContext } from "../context/AppContext";
 
 const ExpenseList = () => {
-    const expenses = [
-        { id: 12, name: 'Shopping', cost: 40 },
-		{ id: 13, name: 'Holiday', cost: 400 },
-		{ id: 14, name: 'Car Service', cost: 50 },
-    ];
+    const { expenses } = useContext(AppContext);
+
+    const [filteredExpenses, setFilteredExpenses] = useState(expenses || []);
+
+    useEffect(() => {
+        setFilteredExpenses(expenses);
+    }, [expenses])
+
+    const handleChange = (event) => {
+		const searchResults = expenses.filter((filteredExpense) =>
+			filteredExpense.name.toLowerCase().includes(event.target.value)
+		);
+		setfilteredExpenses(searchResults);
+	};
 
     return (
-        <ul className='list-group'>
-            {expenses.map((expense) => (
-                <ExpenseItem id={expense.id} name={expense.name} cost={expense.cost} />
-            ))}
-        </ul>
-    )
-}
+        <>
+            <input
+                type="text"
+                class='form-control mb-2 mr-sm-2'
+                placeholder={handleChange}
+            />
+            <ul className='list-group mt-3 mb-3'>
+                {filteredExpenses.map((expenses) => (
+                    <ExpenseItem id={expenses.id} 
+                        name={expenses.name} 
+                        cost={expenses.cost} 
+                    />
+                ))}
+            </ul>
+        </>
+    );
+};
 
 export default ExpenseList;

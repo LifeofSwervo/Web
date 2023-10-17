@@ -1,4 +1,31 @@
 import { createContext, useReducer } from "react";
+import { v4 as uuidv4 } from "uuid";
+
+// 5. The reducer - this is used to update teh state, based on the action
+export const AppReducer = (state, action) => {
+    switch (action.type) {
+        case 'Add_EXPENSE':
+            return {
+                ...state,
+                expenses: [...state.expenses, action.payload],
+            };
+
+        case 'DELETE_EXPENSE':
+            return {
+                ...state,
+                expenses: state.expense.filter(
+                    (expense) => expense.id !== action.payload 
+                ),
+            };
+        case 'SET_BUDGET':
+            return {
+                ...state,
+                budget: action.payload,
+            };
+        default:
+            return state;
+    }   
+}
 
 // 1. Initial state upon app loading
 const intitalState = {
