@@ -6,10 +6,10 @@ import { AppContext } from "../context/AppContext";
 const ExpenseList = () => {
     const { expenses } = useContext(AppContext);
 
-    const [filteredExpenses, setFilteredExpenses] = useState(expenses || []);
+    const [filteredExpenses, setfilteredExpenses] = useState(expenses || []);
 
     useEffect(() => {
-        setFilteredExpenses(expenses);
+        setfilteredExpenses(expenses);
     }, [expenses])
 
     const handleChange = (event) => {
@@ -28,7 +28,8 @@ const ExpenseList = () => {
             />
             <ul className='list-group mt-3 mb-3'>
                 {filteredExpenses.map((expenses) => (
-                    <ExpenseItem id={expenses.id} 
+                    <ExpenseItem 
+                        id={expenses.id} 
                         name={expenses.name} 
                         cost={expenses.cost} 
                     />

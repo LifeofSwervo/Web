@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AppContext } from "../context/AppContext";
 
 
-const AddExpenseForm = () => {
+const AddExpenseForm = (props) => {
+    const { dispatch } = useContext(AppContext);
+
     const [name, setName] = useState('');
     const [cost, setCost] = useState('');
 
