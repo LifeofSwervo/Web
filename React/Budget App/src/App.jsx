@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 import Budget from './components/Budget';
-import Remaining from './components/Remaining';
+import RemainingBudget from './components/Remaining';
 import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseList from './components/ExpenseList';
 import AddExpenseForm from './components/AddExpenseForm';
@@ -19,7 +19,7 @@ const App = () => {
           <Budget />
         </div>
         <div className='col-sm'>
-          <Remaining />
+          <RemainingBudget />
         </div>
         <div className='col-sm'>
           <ExpenseTotal />

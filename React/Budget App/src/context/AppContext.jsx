@@ -1,20 +1,19 @@
 import { createContext, useReducer } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-// 5. The reducer - this is used to update teh state, based on the action
+// 5. The reducer - this is used to update the state, based on the action
 export const AppReducer = (state, action) => {
     switch (action.type) {
-        case 'Add_EXPENSE':
+        case 'ADD_EXPENSE':
             return {
                 ...state,
                 expenses: [...state.expenses, action.payload],
             };
-
         case 'DELETE_EXPENSE':
             return {
                 ...state,
-                expenses: state.expense.filter(
-                    (expense) => expense.id !== action.payload 
+                expenses: state.expenses.filter(
+                    (expense) => expense.id !== action.payload
                 ),
             };
         case 'SET_BUDGET':
@@ -25,17 +24,17 @@ export const AppReducer = (state, action) => {
         default:
             return state;
     }   
-}
+};
 
 // 1. Initial state upon app loading
 const intitalState = {
     budget: 2000,
 	expenses: [
-		{ id: uuidv4(), name: 'Shopping', cost: 50 },
-		{ id: uuidv4(), name: 'Holiday', cost: 300 },
-		{ id: uuidv4(), name: 'Transportation', cost: 70 },
-		{ id: uuidv4(), name: 'Fuel', cost: 40 },
-		{ id: uuidv4(), name: 'Child Care', cost: 500 },
+		{ id: uuidv4(), name: 'Savings $600', cost: 600 },
+		{ id: uuidv4(), name: 'Supplements $115', cost: 115 },
+		{ id: uuidv4(), name: 'Transportation $0', cost: 0 },
+		{ id: uuidv4(), name: 'Food $120', cost: 120 },
+		{ id: uuidv4(), name: 'Snacks $20', cost: 20 },
     ],
 };
 
