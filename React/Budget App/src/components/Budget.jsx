@@ -8,8 +8,9 @@ const Budget = () => {
     const { budget, dispatch } = useContext(AppContext);
     const [isEditing, setIsEditing] = useState(false);
 
+    // Helpers
     const handleEditClick = () => {
-        setIsEditing(true);
+        setIsEditing(true); // Sets "setIsEditing" to true
     };
 
     const handleSaveClick = value => {
@@ -17,7 +18,7 @@ const Budget = () => {
             type: 'SET_BUDGET',
             payload: value,
         });
-        setIsEditing(false);
+        setIsEditing(false); // Sets "setIsEditing" to false
     };
 
     return (

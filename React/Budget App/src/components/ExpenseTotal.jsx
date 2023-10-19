@@ -4,6 +4,7 @@ import { AppContext } from "../context/AppContext";
 const ExpenseTotal = () => {
     const { expenses } = useContext(AppContext);
 
+    // Caculation of list
     const total = expenses.reduce((total, item) => {
         return (total += item.cost);
     }, 0);

@@ -4,6 +4,7 @@ import { AppContext } from "../context/AppContext";
 const RemainingBudget = () => {
     const { expenses, budget } = useContext(AppContext);
 
+    // Helpers
     const totalExpenses = expenses.reduce((total, item) => {
         return(total += item.cost);
     }, 0);
