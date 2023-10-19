@@ -3,13 +3,14 @@ import { AppContext } from "../context/AppContext";
 import { v4 as uuidv4 } from 'uuid';
 
 const AddExpenseForm = (props) => {
-    const { dispatch } = useContext(AppContext);
+    const { dispatch } = useContext(AppContext); // Access Dispatch
 
+    // Updating Variables
     const [name, setName] = useState('');
     const [cost, setCost] = useState('');
 
     const onSubmit = (event) => {
-        event.preventDefault();
+        event.preventDefault(); // Prevent page refresh
         const expense = {
             id: uuidv4(),
             name,
@@ -21,7 +22,8 @@ const AddExpenseForm = (props) => {
             payload: expense,
         });
 
-        setName('');
+        // Reset to empty variable
+        setName(''); 
         setCost('');
     };
 
