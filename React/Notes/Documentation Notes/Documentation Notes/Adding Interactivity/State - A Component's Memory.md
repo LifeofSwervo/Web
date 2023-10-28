@@ -16,5 +16,14 @@
 - Every time the component ends up being rendered useState returns an array containing 2 values:
 - 1. The variable (in this case 'index').
 - 2. The variables setter (in this case 'setIndex'). This has the option to update the variable and trigger React to render the component again. 
-# Ex: const [ index, setIndex ] = useState(0)
+
+*Ex: <span style="color:#87CEEB">const [ index, setIndex ] = useState(0)</span>
+
+*- You are allowed as many state variables you would like in one component.*
+
+<span style="color:#87CEEB">Example</span> -
+```
+const [index, setIndex] = useState(0);
+const [showMore, setShowMore] = useState(false);
+```
 
