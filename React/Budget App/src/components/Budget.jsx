@@ -23,7 +23,7 @@ const Budget = () => {
 
     return (
         <div className="alert alert-secondary p-3 d-flex align-items-center justify-content-between">
-            {isEditing ? (
+            {isEditing ? ( // If isEditing is true render EditBudget, if not - ViewBudget.
                 <EditBudget handleSaveClick={handleSaveClick} budget={budget} />
             ) : (
                 // For part 1 render component inline rather than create a separate one
