@@ -1,0 +1,20 @@
+
+#  State - ==*A form of maintaining a components memory 
+
+## UseState Description - 
+*  UseState is a state variable, retaining the data between renders. 
+* UseState provides user with a state setter function, to update the variable and trigger React to render the component again
+
+- Example of use - ![[Pasted image 20231027222027.png]]
+
+***In React, `useState`, as well as any other function starting with ”`use`”, is called a Hook.***
+
+![[Pasted image 20231027223156.png]]
+
+*The only argument in useState is the initial value of the variable. In this case the value used was 0 resulting in 'useState(0)'.*
+
+- Every time the component ends up being rendered useState returns an array containing 2 values:
+- 1. The variable (in this case 'index').
+- 2. The variables setter (in this case 'setIndex'). This has the option to update the variable and trigger React to render the component again. 
+# Ex: const [ index, setIndex ] = useState(0)
+
