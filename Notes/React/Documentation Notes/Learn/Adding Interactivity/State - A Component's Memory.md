@@ -27,3 +27,7 @@ const [index, setIndex] = useState(0);
 const [showMore, setShowMore] = useState(false);
 ```
 
+## Dev notes - 
+
+*Where the state should live -*
+- Think of it this way, which components need to access the data we're going to store in state? If it's a single component, the state can live in the component itself. If it's more than 1 component that needs the data, then you should find the common parent to these components. 

@@ -1,7 +1,9 @@
-import { useState } from 'react'
-import './App.css'
+//import { useState } from 'react'
+import './index.css'
 import Container from './components/Container'
 import Summary from './components/Summary/Summary';
+import Input from './components/Input';
+import Tasks from './components/Tasks/Tasks';
 
 function App() {
   return (
