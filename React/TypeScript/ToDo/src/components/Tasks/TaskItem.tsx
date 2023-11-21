@@ -2,6 +2,10 @@
 /**
  * Task Item main component.
  * @param name -  Name of task (set by user).
+ * @param done - Boolean indicating task is done. 
+ * @param id - String id of task.
+ * @param toggleDone - Toggles task done.
+ * @param handleDelete - Deletes task's id.
  * @returns - Task Item name and delete button.
  */
 const TaskItem = ({

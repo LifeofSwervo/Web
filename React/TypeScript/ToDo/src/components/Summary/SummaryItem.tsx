@@ -1,4 +1,10 @@
 
+/**
+ * Used to indicate the total, to-do, and done task.
+ * @param itemName - string indicating name of item
+ * @param itemValue - int indicating the value of item
+ * @returns - Boilerplate for Summary item values. 
+ */
 const SummaryItem = ({
     itemName,
     itemValue,

@@ -7,6 +7,7 @@ Summarizes the to-do information, informing user the status of the task.
 */
 const Summary = ({ tasks }: { tasks: Task[] }) => {
   const total = tasks.length; // Grand total of task
+  // Variables create an array, pending only contains Tasks with done: false, Done accepts true. 
   const pending = tasks.filter((t) => t.done === false).length; // Task left to-do
   const done = tasks.filter((t) => t.done === true).length; // Completed task
     return (

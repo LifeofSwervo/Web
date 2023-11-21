@@ -1,6 +1,13 @@
 import TaskItem from "./TaskItem";
 import { Task } from "../../App";
 
+/**
+ * 
+ * @param tasks - Task array, (input from user).
+ * @param toggleDone - Toggles done boolean
+ * @param handleDelete - Handles deleting task id.
+ * @returns 
+ */
 const Tasks = ({
     tasks,
     toggleDone,
