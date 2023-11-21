@@ -1,3 +1,4 @@
+// Original reference https://blog.bitsrc.io/maximize-your-react-skills-build-a-to-do-list-app-from-start-to-finish-with-typescript-vite-b1b5e0faecbe
 import { FormEvent, useState } from 'react'
 import './index.css'
 import { v4 as uuidv4 } from 'uuid';
