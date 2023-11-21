@@ -1,7 +1,7 @@
 import TaskItem from "./TaskItem";
 import { Task } from "../../App";
 
-const Task = ({
+const Tasks = ({
     tasks,
     toggleDone,
     handleDelete,

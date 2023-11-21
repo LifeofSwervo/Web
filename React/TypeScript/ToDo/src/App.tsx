@@ -16,7 +16,7 @@ export interface Task {
 }
 
 /**
- * - Test
+ * - Intial task set as placeholders
  */
 const initialTasks = [
   {
@@ -70,6 +70,7 @@ function App() {
   /**
    * - Handles deleting task.
    * @param id - Id used to match task to be deleted. 
+   * @returns - Returns entire App
    */
   const handleDeleteTask = (id: string) => {
     setTasks((tasks) => tasks.filter((t) => t.id !== id));
