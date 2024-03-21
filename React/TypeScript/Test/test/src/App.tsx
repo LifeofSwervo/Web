@@ -6,9 +6,13 @@ import './App.css';
 import Summary from './components/Summary';
 import Projects from './components/Projects';
 
+const htmlStyle: React.CSSProperties = {
+  backgroundColor: "lightgrey",
+}
+
 const App = () => {
   return (
-    <html>
+    <html  style={htmlStyle}>
       <title>Portfolio</title>
       <NavBar />
       <Introduction />

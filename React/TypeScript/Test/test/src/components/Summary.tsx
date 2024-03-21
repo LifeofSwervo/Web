@@ -12,7 +12,6 @@ const Summary = () => {
         height: "15vh",
         objectFit: "cover",
         borderRadius: "50%",
-        marginLeft: "5vh",
     }
 
     const summaryStyle: React.CSSProperties = {
