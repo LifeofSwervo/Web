@@ -13,14 +13,14 @@ const htmlStyle: React.CSSProperties = {
 
 const App = () => {
   return (
-    <html  style={htmlStyle}>
+    <div  style={htmlStyle}>
       <title>Portfolio</title>
       <NavBar />
       <Introduction />
       <Summary />
       <Projects />
       <Footer />
-    </html>
+    </div>
   );
 }
 

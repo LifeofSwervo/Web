@@ -1,11 +1,17 @@
 
 const footerStyle: React.CSSProperties = {
     backgroundColor: 'darkgray',
-    height: '15vh',
-    display: 'flex',
+    height: '20vh',
     alignItems: 'center',
+    padding: '5vh 18% 0 18%',
+    margin: '0 auto',
+}
+
+const footerContentStyle: React.CSSProperties = {
+    display: 'flex',
     justifyContent: 'space-between',
-    padding: '0% 20%',
+    borderBottom: "1px solid black",
+
 }
 
 const logoStyle: React.CSSProperties = {
@@ -22,13 +28,16 @@ const ulStyle: React.CSSProperties = {
 const liStyle: React.CSSProperties = {
     float: "right",
     padding: "1.5vh 10vw",
+}
 
+const copyRightStyle: React.CSSProperties = {
+    margin: '1vh 0 1vh 0'
 }
 
 const Footer = () => {
     return (
-        <footer>
-            <div style={footerStyle}>
+        <footer style={footerStyle} >
+            <div style={footerContentStyle}>
                 <div>
                     <h1 style={logoStyle}>Nameless Dev</h1>
                 </div>
@@ -41,6 +50,7 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
+            <p>© Clarence Thomas - 2024</p>
         </footer>
     )
 }

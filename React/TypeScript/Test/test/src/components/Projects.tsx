@@ -10,7 +10,7 @@ const Projects = () => {
         justifyContent: 'center',
         display: 'flex',
         flexDirection: 'column',
-        marginTop: '10vh',
+        margin: '10vh auto 10vh auto',
         backgroundColor: 'lightgrey',
     }
 
