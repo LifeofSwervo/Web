@@ -3,6 +3,7 @@ import ProjectsShowcase from "./ProjectsShowcase"
 import placeholderImage from "../Assets/placeholder.png"; 
 
 
+
 const Projects = () => {
     const projectsStyle: React.CSSProperties = {
         alignItems: 'center',
@@ -11,8 +12,6 @@ const Projects = () => {
         flexDirection: 'column',
         marginTop: '10vh',
         backgroundColor: 'lightgrey',
-        margin: "5vh auto",
-
     }
 
     const showcaseStyle: React.CSSProperties = {
@@ -37,7 +36,16 @@ const Projects = () => {
         <div style={projectsStyle}>
             <h1>Projects I've made.</h1>
             <p>This is a showcase of the various different projects I have completed.</p>
-            <ProjectsShowcase />
+            <ProjectsShowcase 
+                image={placeholderImage}
+                name="Placeholder"
+                description="Loren Ipsum"
+            />
+            <ProjectsShowcase 
+                image={placeholderImage}
+                name="Placeholder"
+                description="Loren Ipsum"
+            />
         </div>
     )
 }

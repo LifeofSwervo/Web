@@ -5,6 +5,7 @@ import Introduction from './components/Introduction';
 import './App.css';
 import Summary from './components/Summary';
 import Projects from './components/Projects';
+import Footer from './components/Footer';
 
 const htmlStyle: React.CSSProperties = {
   backgroundColor: "lightgrey",
@@ -18,6 +19,7 @@ const App = () => {
       <Introduction />
       <Summary />
       <Projects />
+      <Footer />
     </html>
   );
 }
