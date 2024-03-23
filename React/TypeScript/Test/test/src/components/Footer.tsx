@@ -16,6 +16,8 @@ const footerContentStyle: React.CSSProperties = {
 
 const logoStyle: React.CSSProperties = {
     font: 'italic 2em Arial',
+    whiteSpace: 'nowrap',
+    marginTop: '1vh',
 }
 
 const ulStyle: React.CSSProperties = {
