@@ -17,7 +17,10 @@ const showcaseStyle: React.CSSProperties = {
 
 
 const leftColumnStyle: React.CSSProperties = {
-    marginRight: '0',
+    display: 'flex',
+    justifyContent: 'right',
+    alignItems: 'right',
+    margin: '2.5vh 2vw 10vh 0',
 }
 
 const rightColumnStyle: React.CSSProperties = {
@@ -27,12 +30,11 @@ const imageStyle: React.CSSProperties = {
     borderRadius: '2%',
     objectFit: 'contain',
     width: '500px',
-    margin: '20vh 2vw 40vh 15vw',
+    
 
 }
 
 const informationStyle: React.CSSProperties = {
-    margin: '20vh 15vw 2.5vh 2vw',
     alignItems: 'left',
 }
 
