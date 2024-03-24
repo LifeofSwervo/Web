@@ -11,8 +11,8 @@ const Projects = () => {
         justifyContent: 'center',
         display: 'flex',
         flexDirection: 'column',
-        margin: '10vh auto 10vh auto',
         backgroundColor: 'lightgrey',
+        border: '3px solid black',
     }
 
     const showcaseStyle: React.CSSProperties = {

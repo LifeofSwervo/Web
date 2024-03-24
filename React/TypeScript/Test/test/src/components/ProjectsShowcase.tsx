@@ -7,27 +7,25 @@ interface ProjectsShowcaseProps {
 }
 
 const showcaseStyle: React.CSSProperties = {
-    display: 'flex',
-    justifyContent: 'space-between',
-    marginTop: '5em'
+    display: 'grid',
+    gridTemplateColumns: 'repeat(2, 1fr)',
+    gridTemplateRows: 'repeat(5, 1fr)',
+    gridColumnGap: '1em',
+    gridRowGap: '1em',
  
 }
 
 const leftColumnStyle: React.CSSProperties = {
-    flex: 1,
-    margin: '5vh 0 2.5vh 20vw',
-    maxWidth: '100%',
-    maxHeight: '100%',
 }
 
 const rightColumnStyle: React.CSSProperties = {
-    flex: 1,
 }
 
 const imageStyle: React.CSSProperties = {
     borderRadius: '2%',
     objectFit: 'contain',
-    width: '50vh'
+    width: '500px',
+    margin: '5vh 20vw',
 
 }
 
