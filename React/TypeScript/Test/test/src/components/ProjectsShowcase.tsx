@@ -10,12 +10,14 @@ const showcaseStyle: React.CSSProperties = {
     display: 'flex',
     justifyContent: 'space-between',
     marginTop: '5em'
-
+ 
 }
 
 const leftColumnStyle: React.CSSProperties = {
     flex: 1,
-    marginRight: '30vh',
+    margin: '5vh 0 2.5vh 20vw',
+    maxWidth: '100%',
+    maxHeight: '100%',
 }
 
 const rightColumnStyle: React.CSSProperties = {
@@ -23,7 +25,10 @@ const rightColumnStyle: React.CSSProperties = {
 }
 
 const imageStyle: React.CSSProperties = {
-    borderRadius: '15%',
+    borderRadius: '2%',
+    objectFit: 'contain',
+    width: '50vh'
+
 }
 
 const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, description}) => {
