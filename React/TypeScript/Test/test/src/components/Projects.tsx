@@ -1,6 +1,6 @@
 import React from "react"
 import ProjectsShowcase from "./ProjectsShowcase"
-import placeholderImage from "../Assets/TheBistroCafe.jpg"; 
+import placeholderImage from "../Assets/Pong.png"; 
 import theBistroCafe from "../Assets/TheBistroCafe.jpg";
 
 

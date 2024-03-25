@@ -28,7 +28,10 @@ const NavBar = () => {
     }
 
     const namelessStyle: React.CSSProperties = {
-        float: "left"
+        float: "left",
+        fontFamily: 'Comic Sans MS, Comic sans, cursive',
+        marginLeft: '12.5vw',
+        fontSize: '1.25em',
     }
     
     return (

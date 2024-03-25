@@ -18,6 +18,7 @@ const logoStyle: React.CSSProperties = {
     font: 'italic 2em Arial',
     whiteSpace: 'nowrap',
     marginTop: '1vh',
+    fontFamily: 'Comic Sans MS, Comic sans, cursive',
 }
 
 const ulStyle: React.CSSProperties = {

@@ -14,8 +14,6 @@ const showcaseStyle: React.CSSProperties = {
     gridRowGap: '1em',
 }
 
-
-
 const leftColumnStyle: React.CSSProperties = {
     display: 'flex',
     justifyContent: 'right',
@@ -38,6 +36,10 @@ const informationStyle: React.CSSProperties = {
     alignItems: 'left',
 }
 
+const nameStyle: React.CSSProperties = {
+    fontSize: '4.5em'
+}
+
 const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, description}) => {
     return (
         <div style={showcaseStyle}>
@@ -45,7 +47,7 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, descrip
                 <img style={imageStyle} src={image} alt={name} />
             </div>
             <div style={informationStyle}>
-                <h4>{name}</h4>
+                <h2>{name}</h2>
                 <p>{description}</p>
             </div>
         </div>
