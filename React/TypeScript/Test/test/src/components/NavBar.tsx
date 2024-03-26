@@ -1,11 +1,18 @@
 
 const NavBar = () => {
+    const navStyle: React.CSSProperties = {
+        borderBottom: "5px solid",
+        borderColor: "#F7D002",
+    }
+
     const ulStyle: React.CSSProperties = {
         listStyleType: "none",
         margin: 0,
         padding: 0,
         overflow: "hidden",
-        backgroundColor: "#333", // Black background of nav
+        backgroundColor: "#0C1618",
+
+        borderBottom: "2px solid #D2FDFF",
 
         // Fixes the navbar to the top of the page
         position: "fixed",
@@ -21,7 +28,7 @@ const NavBar = () => {
 
     const aStyle: React.CSSProperties = {
         display: "block",
-        color: "white",
+        color: 'white',
         textAlign: "center",
         padding: "14px 16px",
         textDecoration: "none"

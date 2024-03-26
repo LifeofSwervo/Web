@@ -1,4 +1,9 @@
+import React, { useState } from "react";
 import placeholderImage from "../Assets/placeholder.png"; 
+
+const goldColor = '#F7D002'; 
+const mintGreenColor = '#D2FDFF';
+const purpleColor = '#4B244A';
 
 interface ProjectsShowcaseProps {
     image: string;
@@ -24,14 +29,6 @@ const leftColumnStyle: React.CSSProperties = {
 const rightColumnStyle: React.CSSProperties = {
 }
 
-const imageStyle: React.CSSProperties = {
-    borderRadius: '2%',
-    objectFit: 'contain',
-    width: '500px',
-    
-
-}
-
 const informationStyle: React.CSSProperties = {
     alignItems: 'left',
 }
@@ -40,15 +37,40 @@ const nameStyle: React.CSSProperties = {
     fontSize: '4.5em'
 }
 
+const buttonStyle: React.CSSProperties = {
+    backgroundColor: goldColor,
+    borderRadius: '5px',
+    fontFamily: 'Poppins, ui-sans-serif',
+    color: 'black',
+    border: 'none',
+    padding: '0.5em 1em',
+    fontSize: '0.7em',
+}
+
 const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, description}) => {
+    const [isHovered, setIsHovered] = React.useState(false);
+    const imageStyle: React.CSSProperties = {
+        borderRadius: '2%',
+        objectFit: 'contain',
+        width: '350px',
+        height: '250px',
+        border: isHovered ? '2px solid #4B244A' : '2px solid #D2FDFF',
+    }
     return (
         <div style={showcaseStyle}>
             <div style={leftColumnStyle}>
-                <img style={imageStyle} src={image} alt={name} />
+                <img 
+                style={imageStyle} 
+                src={image} 
+                alt={name} 
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                />
             </div>
             <div style={informationStyle}>
                 <h2>{name}</h2>
                 <p>{description}</p>
+                <button style={buttonStyle}>Launch</button>
             </div>
         </div>
     )

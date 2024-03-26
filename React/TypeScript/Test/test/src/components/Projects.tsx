@@ -11,8 +11,7 @@ const Projects = () => {
         justifyContent: 'center',
         display: 'flex',
         flexDirection: 'column',
-        backgroundColor: 'lightgrey',
-        border: '3px solid black',
+        backgroundColor: "#0C1618",
     }
 
     const showcaseStyle: React.CSSProperties = {
@@ -38,10 +37,14 @@ const Projects = () => {
         objectFit: 'contain',
     }
 
+    const showcaseDescriptionStyle: React.CSSProperties = {
+        marginBottom: '10vh'
+    }
+
     return (
         <div style={projectsStyle}>
             <h1>Projects I've made.</h1>
-            <p>This is a showcase of the various different projects I have completed.</p>
+            <p style={showcaseDescriptionStyle}>This is a showcase of the various different projects I have completed.</p>
             <div>
                 <ProjectsShowcase 
                     image={theBistroCafe}

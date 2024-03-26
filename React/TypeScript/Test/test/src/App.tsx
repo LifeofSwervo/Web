@@ -8,12 +8,15 @@ import Projects from './components/Projects';
 import Footer from './components/Footer';
 
 const htmlStyle: React.CSSProperties = {
-  backgroundColor: "lightgrey",
+  backgroundColor: "#748386",
+  fontFamily: 'Poppins, ui-sans-serif',
+  color: 'white',
+  
 }
 
 const App = () => {
   return (
-    <div  style={htmlStyle}>
+    <div style={htmlStyle}>
       <title>Portfolio</title>
       <NavBar />
       <Introduction />

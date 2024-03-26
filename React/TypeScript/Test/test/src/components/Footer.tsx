@@ -1,10 +1,12 @@
 
 const footerStyle: React.CSSProperties = {
-    backgroundColor: 'darkgray',
+    backgroundColor: "#748386",
     height: '20vh',
     alignItems: 'center',
     padding: '5vh 18% 0 18%',
     margin: '0 auto',
+    color: 'white',
+    borderTop: "2px solid #D2FDFF"
 }
 
 const footerContentStyle: React.CSSProperties = {
@@ -19,6 +21,7 @@ const logoStyle: React.CSSProperties = {
     whiteSpace: 'nowrap',
     marginTop: '1vh',
     fontFamily: 'Comic Sans MS, Comic sans, cursive',
+    color: '#4B244A'
 }
 
 const ulStyle: React.CSSProperties = {

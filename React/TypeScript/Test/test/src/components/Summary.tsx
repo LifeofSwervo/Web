@@ -4,7 +4,6 @@ const Summary = () => {
     const summaryBorder: React.CSSProperties = {
         border: "3px solid black",
         borderRadius: "50%",
-        backgroundColor: "lightgrey",
     }
 
     const imageStyle: React.CSSProperties = {
@@ -20,7 +19,7 @@ const Summary = () => {
         justifyContent: "center",
         alignItems: "center",
         padding: "0% 25%",
-        backgroundColor: "lightgrey",
+        backgroundColor: "#0C1618",
     }
 
 
