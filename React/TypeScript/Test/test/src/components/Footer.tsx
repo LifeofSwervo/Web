@@ -6,7 +6,9 @@ const footerStyle: React.CSSProperties = {
     padding: '5vh 18% 0 18%',
     margin: '0 auto',
     color: 'white',
-    borderTop: "2px solid #D2FDFF"
+    borderTop: "2px solid #D2FDFF",
+    minHeight: '150px', // adjust this value as needed
+
 }
 
 const footerContentStyle: React.CSSProperties = {
@@ -25,14 +27,16 @@ const logoStyle: React.CSSProperties = {
 }
 
 const ulStyle: React.CSSProperties = {
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr', // creates two columns
+    gridTemplateRows: '1fr 1fr', // creates two rows
+    gap: '10px', // adjust as needed for spacing between items
     listStyleType: "none",
     margin: 0,
     padding: 0,
-    overflow: "hidden",
 }
 
 const liStyle: React.CSSProperties = {
-    float: "right",
     padding: "1.5vh 10vw",
 }
 
@@ -56,7 +60,7 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <p>© Clarence Thomas - 2024</p>
+            <p style={copyRightStyle}>© Clarence Thomas - 2024</p>
         </footer>
     )
 }

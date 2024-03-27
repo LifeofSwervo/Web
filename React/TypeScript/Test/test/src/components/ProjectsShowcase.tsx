@@ -24,7 +24,8 @@ const leftColumnStyle: React.CSSProperties = {
     display: 'flex',
     justifyContent: 'right',
     alignItems: 'right',
-    margin: '2.5vh 2vw 10vh 0',
+    margin: '2.5vh 2vw 10vh 20vw',
+    flexDirection: 'column',
 }
 
 const rightColumnStyle: React.CSSProperties = {
@@ -45,9 +46,10 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, descrip
     const imageStyle: React.CSSProperties = {
         borderRadius: '2%',
         objectFit: 'contain',
-        width: '350px',
-        height: '250px',
+        width: '300px',
+        height: '150px',
         border: isHovered ? `2px solid ${goldColor}` : '2px solid #D2FDFF',
+        marginBottom: '1em',
     }
     const buttonStyle: React.CSSProperties = {
         backgroundColor: buttonIsHovered ? lightPurpleColor : purpleColor,
@@ -62,6 +64,13 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, descrip
     return (
         <div style={showcaseStyle}>
             <div style={leftColumnStyle}>
+                <img 
+                style={imageStyle} 
+                src={image} 
+                alt={name} 
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}
+                />
                 <img 
                 style={imageStyle} 
                 src={image} 

@@ -7,11 +7,13 @@ import Summary from './components/Summary';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 
+const richBlack = '#0C1618';
+
 const htmlStyle: React.CSSProperties = {
-  backgroundColor: "#748386",
+  backgroundColor: richBlack,
   fontFamily: 'Poppins, ui-sans-serif',
   color: 'white',
-  
+
 }
 
 const App = () => {
