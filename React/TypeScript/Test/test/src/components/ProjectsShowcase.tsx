@@ -4,6 +4,7 @@ import placeholderImage from "../Assets/placeholder.png";
 const goldColor = '#F7D002'; 
 const mintGreenColor = '#D2FDFF';
 const purpleColor = '#4B244A';
+const lightPurpleColor = '#7B4E78';
 
 interface ProjectsShowcaseProps {
     image: string;
@@ -37,24 +38,26 @@ const nameStyle: React.CSSProperties = {
     fontSize: '4.5em'
 }
 
-const buttonStyle: React.CSSProperties = {
-    backgroundColor: goldColor,
-    borderRadius: '5px',
-    fontFamily: 'Poppins, ui-sans-serif',
-    color: 'black',
-    border: 'none',
-    padding: '0.5em 1em',
-    fontSize: '0.7em',
-}
-
 const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, description}) => {
     const [isHovered, setIsHovered] = React.useState(false);
+    const [buttonIsHovered, setButtonIsHovered] = React.useState(false);
+
     const imageStyle: React.CSSProperties = {
         borderRadius: '2%',
         objectFit: 'contain',
         width: '350px',
         height: '250px',
-        border: isHovered ? '2px solid #4B244A' : '2px solid #D2FDFF',
+        border: isHovered ? `2px solid ${goldColor}` : '2px solid #D2FDFF',
+    }
+    const buttonStyle: React.CSSProperties = {
+        backgroundColor: buttonIsHovered ? lightPurpleColor : purpleColor,
+        borderRadius: '5px',
+        fontFamily: 'Poppins, ui-sans-serif',
+        color: mintGreenColor,
+        border: '1px solid transparent',
+        padding: '0.5em 1em',
+        fontSize: '0.7em',
+        textDecoration: buttonIsHovered ? 'underline' : 'none',
     }
     return (
         <div style={showcaseStyle}>
@@ -70,7 +73,14 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, descrip
             <div style={informationStyle}>
                 <h2>{name}</h2>
                 <p>{description}</p>
-                <button style={buttonStyle}>Launch</button>
+                <button 
+                style={buttonStyle} 
+                onMouseEnter={() => setButtonIsHovered(true)}
+                onMouseLeave={() => setButtonIsHovered(false)}
+                >
+                    Source Code
+                </button>
+
             </div>
         </div>
     )
