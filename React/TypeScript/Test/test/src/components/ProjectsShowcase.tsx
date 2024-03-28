@@ -42,6 +42,7 @@ const nameStyle: React.CSSProperties = {
 const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, description}) => {
     const [isHovered, setIsHovered] = React.useState(false);
     const [buttonIsHovered, setButtonIsHovered] = React.useState(false);
+    const [isSecondImageHovered, setIsSecondImageHovered] = React.useState(false);
 
     const imageStyle: React.CSSProperties = {
         borderRadius: '2%',
@@ -51,6 +52,16 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, descrip
         border: isHovered ? `2px solid ${goldColor}` : '2px solid #D2FDFF',
         marginBottom: '1em',
     }
+
+    const secondImageStyle: React.CSSProperties = { // New style object
+        borderRadius: '2%',
+        objectFit: 'contain',
+        width: '300px',
+        height: '150px',
+        border: isSecondImageHovered ? `2px solid ${goldColor}` : '2px solid #D2FDFF', // Using new state variable
+        marginBottom: '1em',
+    }
+
     const buttonStyle: React.CSSProperties = {
         backgroundColor: buttonIsHovered ? lightPurpleColor : purpleColor,
         borderRadius: '5px',
@@ -72,11 +83,11 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, descrip
                 onMouseLeave={() => setIsHovered(false)}
                 />
                 <img 
-                style={imageStyle} 
+                style={secondImageStyle} 
                 src={image} 
                 alt={name} 
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
+                onMouseEnter={() => setIsSecondImageHovered(true)}
+                onMouseLeave={() => setIsSecondImageHovered(false)}
                 />
             </div>
             <div style={informationStyle}>
