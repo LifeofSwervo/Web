@@ -1,6 +1,6 @@
 import React from "react"
 import ProjectsShowcase from "./ProjectsShowcase"
-import placeholderImage from "../Assets/TheBistroCafe.jpg"; 
+import placeholderImage from "../Assets/Pong.png"; 
 import theBistroCafe from "../Assets/TheBistroCafe.jpg";
 
 
@@ -11,13 +11,16 @@ const Projects = () => {
         justifyContent: 'center',
         display: 'flex',
         flexDirection: 'column',
-        margin: '10vh auto 10vh auto',
-        backgroundColor: 'lightgrey',
+        backgroundColor: "#0C1618",
     }
 
     const showcaseStyle: React.CSSProperties = {
-        display: 'flex',
-        justifyContent: 'space-between',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(2, 1fr)',
+        gridTemplateRows: 'repeat(1, 1fr)',
+        gridColumnGap: '1em',
+        gridRowGap: '1em',
+     
     }
 
     const leftColumnStyle: React.CSSProperties = {
@@ -30,29 +33,36 @@ const Projects = () => {
     }
 
     const imageStyle: React.CSSProperties = {
-        borderRadius: '5%',
+        borderRadius: '12px',
         objectFit: 'contain',
+    }
+
+    const showcaseDescriptionStyle: React.CSSProperties = {
+        marginBottom: '10vh'
     }
 
     return (
         <div style={projectsStyle}>
             <h1>Projects I've made.</h1>
-            <p>This is a showcase of the various different projects I have completed.</p>
-            <ProjectsShowcase 
-                image={theBistroCafe}
-                name="The Bistro Cafe"
-                description="The Bistro Cafe is was one of my first website made purely from HTML, CSS and Javascript. This was my introduction into webdevelopment. This helped me pick up the very basics of web development."
-            /> 
-            <ProjectsShowcase 
-                image={placeholderImage}
-                name="Placeholder"
-                description="Loren Ipsum"
-            />
-            <ProjectsShowcase 
-                image={placeholderImage}
-                name="Placeholder"
-                description="Loren Ipsum"
-            />
+            <p style={showcaseDescriptionStyle}>This is a showcase of the various different projects I have completed.</p>
+            <div>
+                <ProjectsShowcase 
+                    image={theBistroCafe}
+                    name="The Bistro Cafe"
+                    description="The Bistro Cafe is was one of my first website made purely from HTML, CSS and Javascript. This was my introduction into webdevelopment. This helped me pick up the very basics of web development."
+                /> 
+                <ProjectsShowcase 
+                    image={placeholderImage}
+                    name="Placeholder"
+                    description="Loren Ipsum"
+                />
+                <ProjectsShowcase 
+                    image={placeholderImage}
+                    name="Placeholder"
+                    description="Loren Ipsum"
+                />
+            </div>
+            
         </div>
     )
 }

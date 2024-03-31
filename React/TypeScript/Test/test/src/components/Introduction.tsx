@@ -2,7 +2,7 @@ import React from "react";
 
 const Introduction = () => {
     const introStyle: React.CSSProperties = {
-        backgroundColor: "lightgrey",
+        backgroundColor: '#0C1618',
         padding: "0% 10%",
         textAlign: "center",
         alignItems: "center",
@@ -10,11 +10,12 @@ const Introduction = () => {
         flexDirection: "column",
         display: "flex",
         height: "100vh",
+        fontFamily: 'Poppins, ui-sans-serif',
     }
     const headingStyle: React.CSSProperties = {
         fontSize: "3em",
         marginBottom: "0.5em",
-        color: "black",
+        color: "white",
     }
 
     return (
