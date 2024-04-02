@@ -28,15 +28,21 @@ const leftColumnStyle: React.CSSProperties = {
     display: 'flex',
     justifyContent: 'right',
     alignItems: 'right',
-    margin: '2.5vh 2vw 10vh 20vw',
+    margin: '2.5vh 2vw 10vh 30vw',
     flexDirection: 'column',
 }
 
 const rightColumnStyle: React.CSSProperties = {
+    display: 'flex',
+    justifyContent: 'left',
+    alignItems: 'left',
+    margin: '2.5vh 2vw 10vh 30vw',
+    flexDirection: 'column',
 }
 
 const informationStyle: React.CSSProperties = {
     alignItems: 'left',
+    
 }
 
 const nameStyle: React.CSSProperties = {
