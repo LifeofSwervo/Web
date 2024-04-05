@@ -77,13 +77,13 @@ const NavBar = () => {
                 style={aboutStyle} 
                 onMouseEnter={() => setAboutHover(true)} 
                 onMouseLeave={() => setAboutHover(false)}>
-                    <a href="#about" style={aStyle}>About</a>
+                    <a href="about" style={aStyle}>About</a>
                 </li>
                 <li 
                 style={homeStyle} 
                 onMouseEnter={() => setHomeHover(true)} 
                 onMouseLeave={() => setHomeHover(false)}>
-                    <a href="#home" style={aStyle}>Home</a>
+                    <a href="home" style={aStyle}>Home</a>
                 </li>
             </ul>
         </div>

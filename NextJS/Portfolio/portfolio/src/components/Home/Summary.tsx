@@ -1,4 +1,4 @@
-import summaryPhoto from '../Assets/SummaryPhoto.jpeg';
+import summaryPhoto from '../../Assets/SummaryPhoto.jpeg';
 import Image from 'next/image';
 
 const Summary = () => {

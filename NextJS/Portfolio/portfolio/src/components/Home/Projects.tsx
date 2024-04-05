@@ -1,7 +1,7 @@
 import React from "react"
 import ProjectsShowcase from "./ProjectsShowcase"
-import placeholderImage from "../Assets/placeholder.png"; 
-import theBistroCafe from "../Assets/placeholder.png";
+import placeholderImage from "../../Assets/placeholder.png";
+import theBistroCafe from "../../Assets/placeholder.png";
 
 
 
