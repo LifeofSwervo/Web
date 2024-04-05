@@ -1,8 +1,8 @@
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
-import Projects from "@/components/Projects";
-import Summary from "@/components/Summary";
-import Introduction from "@/components/Introduction";
+import Projects from "@/components/Home/Projects";
+import Summary from "@/components/Home/Summary";
+import Introduction from "@/components/Home/Introduction";
 
 const richBlack = '#0C1618';
 

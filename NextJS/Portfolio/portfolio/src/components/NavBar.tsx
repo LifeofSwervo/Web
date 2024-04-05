@@ -71,7 +71,7 @@ const NavBar = () => {
                 style={contactStyle} 
                 onMouseEnter={() => setContactHover(true)} 
                 onMouseLeave={() => setContactHover(false)}>
-                    <a href="#contact" style={aStyle}>Contact</a>
+                    <a href="contact" style={aStyle}>Contact</a>
                 </li>
                 <li 
                 style={aboutStyle} 
