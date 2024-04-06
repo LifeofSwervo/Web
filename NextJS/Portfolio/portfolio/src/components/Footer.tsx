@@ -3,7 +3,7 @@ const footerStyle: React.CSSProperties = {
     backgroundColor: "#748386",
     height: '20vh',
     alignItems: 'center',
-    padding: '5vh 18% 0 18%',
+    padding: '5vh 5% 0 5%',
     margin: '0 auto',
     color: 'white',
     borderTop: "2px solid #D2FDFF",

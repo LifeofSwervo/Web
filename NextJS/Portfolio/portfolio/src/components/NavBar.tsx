@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link';
 import React, { useState } from 'react';
 
 const NavBar = () => {
@@ -83,7 +84,7 @@ const NavBar = () => {
                 style={homeStyle} 
                 onMouseEnter={() => setHomeHover(true)} 
                 onMouseLeave={() => setHomeHover(false)}>
-                    <a href="home" style={aStyle}>Home</a>
+                    <Link href="/" style={aStyle}>Home</Link>
                 </li>
             </ul>
         </div>
