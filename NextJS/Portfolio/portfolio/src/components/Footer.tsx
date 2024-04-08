@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Logo from "../../public/logo.svg";
 
 const footerStyle: React.CSSProperties = {
     backgroundColor: "#748386",
@@ -23,7 +25,12 @@ const logoStyle: React.CSSProperties = {
     whiteSpace: 'nowrap',
     marginTop: '1vh',
     fontFamily: 'Comic Sans MS, Comic sans, cursive',
-    color: '#4B244A'
+    color: '#4B244A',
+    width: '100px',
+}
+
+const imageStyle: React.CSSProperties = {
+    height: '180px',
 }
 
 const ulStyle: React.CSSProperties = {
@@ -49,7 +56,7 @@ const Footer = () => {
         <footer style={footerStyle} >
             <div style={footerContentStyle}>
                 <div>
-                    <h1 style={logoStyle}>Nameless Dev</h1>
+                    <h1 style={logoStyle}><Image src={Logo} alt="Namless Dev" style={imageStyle}></Image></h1>
                 </div>
                 <div>
                     <ul style={ulStyle}>
