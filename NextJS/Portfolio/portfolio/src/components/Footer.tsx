@@ -17,7 +17,6 @@ const footerContentStyle: React.CSSProperties = {
     display: 'flex',
     justifyContent: 'space-between',
     borderBottom: "1px solid black",
-
 }
 
 const logoStyle: React.CSSProperties = {
@@ -26,11 +25,18 @@ const logoStyle: React.CSSProperties = {
     marginTop: '1vh',
     fontFamily: 'Comic Sans MS, Comic sans, cursive',
     color: '#4B244A',
-    width: '100px',
+    height: '158px',
 }
 
 const imageStyle: React.CSSProperties = {
-    height: '180px',
+    height: 'auto',
+    width: '100%',
+    padding: '0',
+    margin: '0',
+    backgroundImage: `url(${Logo})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
 }
 
 const ulStyle: React.CSSProperties = {
@@ -55,8 +61,8 @@ const Footer = () => {
     return (
         <footer style={footerStyle} >
             <div style={footerContentStyle}>
-                <div>
-                    <h1 style={logoStyle}><Image src={Logo} alt="Namless Dev" style={imageStyle}></Image></h1>
+                <div style={logoStyle}>
+                    <Image src={Logo} alt="Logo" layout="responsive" objectFit="cover" style={imageStyle}/>
                 </div>
                 <div>
                     <ul style={ulStyle}>
