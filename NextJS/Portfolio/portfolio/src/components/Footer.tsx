@@ -4,7 +4,7 @@ import Logo from "../../public/logo.svg";
 const footerStyle: React.CSSProperties = {
     backgroundColor: "#748386",
     alignItems: 'center',
-    padding: '1vh 5% 0 5%',
+    padding: '1vh 5% 1vh 5%',
     margin: 'auto auto',
     color: 'white',
     borderTop: "2px solid #D2FDFF",

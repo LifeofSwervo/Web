@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from 'next/link';
 import React, { useState } from 'react';
+import Logo from "../../public/logo.svg";
 
 const NavBar = () => {
     const [homeHover, setHomeHover] = React.useState(false);
@@ -12,6 +14,7 @@ const NavBar = () => {
         backgroundColor: "#0C1618",
         padding: '0',
         margin: '0',
+        lineHeight: '0',
     }
 
     const ulStyle: React.CSSProperties = {
@@ -63,11 +66,30 @@ const NavBar = () => {
         marginLeft: '12.5vw',
         fontSize: '1.25em',
     }
+
+    const imageStyle: React.CSSProperties = {
+        width: '50%',
+        height: '50%',
+        padding: '0',
+        objectFit: 'contain',
+    }
+
+    const imageAStyle: React.CSSProperties = {
+        display: "block",
+        color: 'white',
+        textAlign: "center",
+        textDecoration: "none"
+    }
     
     return (
         <div style={navStyle}>
             <ul id="navBarList" style={ulStyle}>
-                <li style={namelessStyle}><a href="#nameless" style={aStyle}>Nameless Dev</a></li>
+                <li style={namelessStyle}>
+                    <a 
+                    href="#nameless" 
+                    style={imageAStyle}><Image src={Logo} alt="Logo" style={imageStyle} />
+                    </a>
+                </li>
                 <li 
                 style={contactStyle} 
                 onMouseEnter={() => setContactHover(true)} 
