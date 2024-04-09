@@ -10,6 +10,9 @@ const htmlStyle: React.CSSProperties = {
   backgroundColor: richBlack,
   fontFamily: 'Poppins, ui-sans-serif',
   color: 'white',
+  display: 'flex',
+  flexDirection: 'column',
+  minHeight: '100vh',
 }
 
 
