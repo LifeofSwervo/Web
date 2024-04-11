@@ -49,7 +49,7 @@ const Projects = () => {
                 <ProjectsShowcase 
                     image={theBistroCafe}
                     name="The Bistro Cafe"
-                    description="The Bistro Cafe is was one of my first website made purely from HTML, CSS and Javascript. This was my introduction into webdevelopment. This helped me pick up the very basics of web development."
+                    description="The Bistro Cafe is was one of my first website's made purely from HTML, CSS and Javascript. This was my introduction into webdevelopment. This helped me pick up the very basics of web development."
                 /> 
                 <ProjectsShowcase 
                     image={placeholderImage}

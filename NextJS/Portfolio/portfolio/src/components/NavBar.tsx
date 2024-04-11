@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from 'next/link';
 import React, { useState } from 'react';
-import Logo from "../../public/logo.svg";
+import Logo from "../../public/logoNoText.svg";
 
 const NavBar = () => {
     const [homeHover, setHomeHover] = React.useState(false);
@@ -37,19 +37,21 @@ const NavBar = () => {
         float: "right",
         marginRight: '1.0vw',
         textDecoration: aboutHover ? 'underline' : 'none',
-
+        marginTop: '1vh'
     }
 
     const homeStyle: React.CSSProperties = {
         float: "right",
         marginRight: '1.0vw',
         textDecoration: homeHover ? 'underline' : 'none',
+        marginTop: '1vh'
     }
 
     const contactStyle: React.CSSProperties = {
         float: "right",
         marginRight: '12.5vw',
         textDecoration: contactHover ? 'underline' : 'none',
+        marginTop: '1vh'
     }
 
     const aStyle: React.CSSProperties = {
@@ -68,10 +70,11 @@ const NavBar = () => {
     }
 
     const imageStyle: React.CSSProperties = {
-        width: '50%',
-        height: '50%',
+        width: '15%',
+        height: '15%',
         padding: '0',
         objectFit: 'contain',
+        float: 'left',
     }
 
     const imageAStyle: React.CSSProperties = {
