@@ -80,7 +80,6 @@ export default function Contact() {
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus nesciunt necessitatibus quis iusto, molestiae veritatis blanditiis deserunt non voluptatibus vitae nisi, laboriosam atque, incidunt esse nihil officiis eligendi aperiam aliquam.</p>
           </div>
         </div>
-        <h1>Contact</h1>
         <Footer />
       </main>
     );
