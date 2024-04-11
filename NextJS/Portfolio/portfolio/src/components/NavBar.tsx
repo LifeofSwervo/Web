@@ -83,6 +83,10 @@ const NavBar = () => {
         textAlign: "center",
         textDecoration: "none"
     }
+
+    const namelessHeaderStyle: React.CSSProperties = {
+        fontFamily: 'Pristina, ui-serif',
+    }
     
     return (
         <div style={navStyle}>
@@ -90,7 +94,9 @@ const NavBar = () => {
                 <li style={namelessStyle}>
                     <a 
                     href="#nameless" 
-                    style={imageAStyle}><Image src={Logo} alt="Logo" style={imageStyle} />
+                    style={imageAStyle}><Image src={Logo} alt="Logo" style={imageStyle} /> 
+                    <h1>Nameless</h1>
+                    <h1>Dev</h1>
                     </a>
                 </li>
                 <li 
