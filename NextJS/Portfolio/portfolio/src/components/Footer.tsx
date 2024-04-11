@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "../../public/logo.svg";
+import Logo from "../../public/bitmap.svg";
 
 const footerStyle: React.CSSProperties = {
     backgroundColor: "#748386",
