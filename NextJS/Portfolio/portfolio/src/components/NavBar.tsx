@@ -86,6 +86,7 @@ const NavBar = () => {
 
     const namelessHeaderStyle: React.CSSProperties = {
         fontFamily: 'Pristina, ui-serif',
+        fontSize: '.5em',
     }
     
     return (
@@ -95,8 +96,8 @@ const NavBar = () => {
                     <a 
                     href="#nameless" 
                     style={imageAStyle}><Image src={Logo} alt="Logo" style={imageStyle} /> 
-                    <h1>Nameless</h1>
-                    <h1>Dev</h1>
+                    <h2 style={namelessHeaderStyle}>Nameless</h2>
+                    <h1 style={namelessHeaderStyle}>Dev</h1>
                     </a>
                 </li>
                 <li 
