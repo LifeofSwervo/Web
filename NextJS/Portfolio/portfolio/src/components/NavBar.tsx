@@ -31,9 +31,9 @@ const NavBar = () => {
 
     const ulStyle: React.CSSProperties = {
         listStyleType: "none",
-        margin: 0,
         padding: 0,
         overflow: "hidden",
+        marginLeft: 'auto',
     }
 
     const aboutStyle: React.CSSProperties = {
@@ -65,32 +65,13 @@ const NavBar = () => {
         textDecoration: "none"
     }
 
-    const namelessStyle: React.CSSProperties = {
-        float: "left",
-        fontFamily: 'Comic Sans MS, Comic sans, cursive',
-        marginLeft: '12.5vw',
-        fontSize: '1.25em',
-    }
-
     const imageStyle: React.CSSProperties = {
-        marginLeft: '12.5vw',
+        margin: '10px 0 10px 6.5vw',
         width: '40%',
         height: '40%',
         padding: '0',
         objectFit: 'contain',
         float: 'left'
-    }
-
-    const imageAStyle: React.CSSProperties = {
-        display: "block",
-        color: 'white',
-        textAlign: "center",
-        textDecoration: "none"
-    }
-
-    const namelessHeaderStyle: React.CSSProperties = {
-        fontFamily: 'Pristina, ui-serif',
-        fontSize: '.5em',
     }
     
     return (
