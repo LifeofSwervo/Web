@@ -3,18 +3,30 @@
 import Image from "next/image";
 import Link from 'next/link';
 import React, { useState } from 'react';
-import Logo from "../../public/logoNoText.svg";
+import Logo from "../../public/navBarLogo.svg";
 
 const NavBar = () => {
     const [homeHover, setHomeHover] = React.useState(false);
     const [aboutHover, setAboutHover] = React.useState(false);
     const [contactHover, setContactHover] = React.useState(false);
-
+ 
     const navStyle: React.CSSProperties = {
         backgroundColor: "#0C1618",
         padding: '0',
         margin: '0',
         lineHeight: '0',
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+
+        // Breakpoint 
+        listStyleType: "none",
+        overflow: "hidden",
+        borderBottom: "2px solid #D2FDFF",
+        position: "fixed",
+        width: "100%",
+        top: 0,
+        zIndex: 1,
     }
 
     const ulStyle: React.CSSProperties = {
@@ -22,15 +34,6 @@ const NavBar = () => {
         margin: 0,
         padding: 0,
         overflow: "hidden",
-        backgroundColor: "#0C1618",
-
-        borderBottom: "2px solid #D2FDFF",
-
-        // Fixes the navbar to the top of the page
-        position: "fixed",
-        width: "100%",
-        top: 0,
-        zIndex: 1,
     }
 
     const aboutStyle: React.CSSProperties = {
@@ -70,11 +73,12 @@ const NavBar = () => {
     }
 
     const imageStyle: React.CSSProperties = {
-        width: '15%',
-        height: '15%',
+        marginLeft: '12.5vw',
+        width: '40%',
+        height: '40%',
         padding: '0',
         objectFit: 'contain',
-        float: 'left',
+        float: 'left'
     }
 
     const imageAStyle: React.CSSProperties = {
@@ -90,16 +94,12 @@ const NavBar = () => {
     }
     
     return (
-        <div style={navStyle}>
-            <ul id="navBarList" style={ulStyle}>
-                <li style={namelessStyle}>
-                    <a 
-                    href="#nameless" 
-                    style={imageAStyle}><Image src={Logo} alt="Logo" style={imageStyle} /> 
-                    <h2 style={namelessHeaderStyle}>Nameless</h2>
-                    <h1 style={namelessHeaderStyle}>Dev</h1>
-                    </a>
-                </li>
+        <nav style={navStyle}>
+            <a 
+                href="/">   
+                <Image src={Logo} alt="Logo" style={imageStyle} /> 
+            </a>
+            <ul style={ulStyle}>
                 <li 
                 style={contactStyle} 
                 onMouseEnter={() => setContactHover(true)} 
@@ -119,7 +119,7 @@ const NavBar = () => {
                     <Link href="/" style={aStyle}>Home</Link>
                 </li>
             </ul>
-        </div>
+        </nav>
     );
 }
 
