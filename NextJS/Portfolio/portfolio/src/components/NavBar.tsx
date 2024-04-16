@@ -5,6 +5,9 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import Logo from "../../public/navBarLogo.svg";
 
+
+const goldColor = '#F7D002'; 
+
 const NavBar = () => {
     const [homeHover, setHomeHover] = React.useState(false);
     const [aboutHover, setAboutHover] = React.useState(false);
@@ -31,38 +34,35 @@ const NavBar = () => {
 
     const ulStyle: React.CSSProperties = {
         listStyleType: "none",
-        padding: 0,
+        padding: '0.5%',
         overflow: "hidden",
-        marginLeft: 'auto',
+        margin: '0 5vw 0 auto',
+        display: "flex",
+        flexDirection: "row",
     }
 
     const aboutStyle: React.CSSProperties = {
         float: "right",
         marginRight: '1.0vw',
         textDecoration: aboutHover ? 'underline' : 'none',
-        marginTop: '1vh'
+        marginTop: '1vh',
+        color: aboutHover ? `${goldColor}` : 'white',
     }
 
     const homeStyle: React.CSSProperties = {
         float: "right",
-        marginRight: '1.0vw',
         textDecoration: homeHover ? 'underline' : 'none',
-        marginTop: '1vh'
+        marginTop: '1vh',
     }
 
     const contactStyle: React.CSSProperties = {
         float: "right",
-        marginRight: '12.5vw',
         textDecoration: contactHover ? 'underline' : 'none',
-        marginTop: '1vh'
+        marginTop: '1vh',
     }
 
-    const aStyle: React.CSSProperties = {
-        display: "block",
-        color: 'white',
+    const linksStyle: React.CSSProperties = {
         textAlign: "center",
-        padding: "14px 16px",
-        textDecoration: "none"
     }
 
     const imageStyle: React.CSSProperties = {
@@ -82,22 +82,22 @@ const NavBar = () => {
             </a>
             <ul style={ulStyle}>
                 <li 
-                style={contactStyle} 
+                style={linksStyle} 
                 onMouseEnter={() => setContactHover(true)} 
                 onMouseLeave={() => setContactHover(false)}>
-                    <a href="contact" style={aStyle}>Contact</a>
+                    <a href="contact" style={contactStyle}>Contact</a>
                 </li>
                 <li 
-                style={aboutStyle} 
+                style={linksStyle} 
                 onMouseEnter={() => setAboutHover(true)} 
                 onMouseLeave={() => setAboutHover(false)}>
-                    <a href="about" style={aStyle}>About</a>
+                    <a href="about" style={aboutStyle}>About</a>
                 </li>
                 <li 
-                style={homeStyle} 
+                style={linksStyle} 
                 onMouseEnter={() => setHomeHover(true)} 
                 onMouseLeave={() => setHomeHover(false)}>
-                    <Link href="/" style={aStyle}>Home</Link>
+                    <Link href="/" style={homeStyle}>Home</Link>
                 </li>
             </ul>
         </nav>

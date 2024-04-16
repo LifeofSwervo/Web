@@ -15,6 +15,7 @@ const contactIntroStyle: React.CSSProperties = {
 }
 
 const formsOfContactStyle: React.CSSProperties = {
+  backgroundColor: '#0C1618',
   display: "grid",
   gridTemplateColumns: "repeat(3, 1fr)",
   gridTemplateRows: "repeat(2, 1fr)",
