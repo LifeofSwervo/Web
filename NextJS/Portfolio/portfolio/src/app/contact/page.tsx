@@ -1,3 +1,5 @@
+"use client"; // top to the file
+
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import Image from 'next/image';
@@ -66,11 +68,10 @@ export default function Contact() {
         <div style={formsOfContactStyle}>
           <div style={gitHubStyle}>
             <h1>GitHub</h1>
-            <motion.div 
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <Image src="/Logos/github.svg" alt="Github Logo" width={32} height={32} />
+            <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}>
+                <Image src="/Logos/github.svg" alt="Github Logo" width={32} height={32} />
             </motion.div>
             <p>My GitHub is where I keep all of my projects and code snippets. If you want to see what I'm working on, check out my GitHub.</p>
           </div>
