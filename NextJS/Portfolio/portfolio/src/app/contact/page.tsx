@@ -29,6 +29,13 @@ const formsOfContactStyle: React.CSSProperties = {
   color: "white",
 }
 
+const contactHeaderStyle: React.CSSProperties = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  flexDirection: "row",
+}
+
 const gitHubStyle: React.CSSProperties = {
   gridArea: "1 / 1 / 2 / 2",
 }
@@ -67,12 +74,16 @@ export default function Contact() {
         </div>
         <div style={formsOfContactStyle}>
           <div style={gitHubStyle}>
-            <h1>GitHub</h1>
-            <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}>
-                <Image src="/Logos/github.svg" alt="Github Logo" width={32} height={32} />
-            </motion.div>
+            <div style={contactHeaderStyle}>
+              <motion.img
+              src="/Logos/github.svg"
+              alt="GitHub Logo"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              width={32}
+              height={32} />
+              <h1>GitHub</h1>
+            </div>
             <p>My GitHub is where I keep all of my projects and code snippets. If you want to see what I'm working on, check out my GitHub.</p>
           </div>
           <div style={linkedInStyle}>
