@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import placeholderImage from "../Assets/placeholder.png"; 
 import Image from "next/image";
 import { StaticImageData } from "next/image";
+import { motion } from "framer-motion";
 
 const goldColor = '#F7D002'; 
 const mintGreenColor = '#D2FDFF';
@@ -73,7 +74,7 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, descrip
     }
 
     const buttonStyle: React.CSSProperties = {
-        backgroundColor: buttonIsHovered ? lightPurpleColor : purpleColor,
+        backgroundColor: purpleColor,
         borderRadius: '5px',
         fontFamily: 'Poppins, ui-sans-serif',
         color: mintGreenColor,
@@ -103,13 +104,15 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, descrip
             <div style={informationStyle}>
                 <h2>{name}</h2>
                 <p>{description}</p>
-                <button 
+                <motion.button 
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
                 style={buttonStyle} 
-                onMouseEnter={() => setButtonIsHovered(true)}
-                onMouseLeave={() => setButtonIsHovered(false)}
+                onHoverStart={() => setButtonIsHovered(true)}
+                onHoverEnd={() => setButtonIsHovered(false)}
                 >
                     Source Code
-                </button>
+                </motion.button>
 
             </div>
         </div>
