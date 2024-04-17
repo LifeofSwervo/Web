@@ -59,7 +59,7 @@ const NavBar = () => {
 
     const contactStyle: React.CSSProperties = {
         float: "right",
-        color: aboutHover ? `${goldColor}` : 'white',
+        color: contactHover ? `${goldColor}` : 'white',
         textDecoration: contactHover ? 'underline' : 'none',
     }
 
