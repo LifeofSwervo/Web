@@ -36,29 +36,31 @@ const NavBar = () => {
         listStyleType: "none",
         padding: '0.5%',
         overflow: "hidden",
-        margin: '0 5vw 0 auto',
+        margin: 'auto',
+        alignItems: "center",
         display: "flex",
         flexDirection: "row",
+        justifyContent: 'center',
+        minHeight: '2em',
     }
 
     const aboutStyle: React.CSSProperties = {
         float: "right",
-        marginRight: '1.0vw',
         textDecoration: aboutHover ? 'underline' : 'none',
-        marginTop: '1vh',
         color: aboutHover ? `${goldColor}` : 'white',
+        margin: 'auto 3vw'
     }
 
     const homeStyle: React.CSSProperties = {
         float: "right",
         textDecoration: homeHover ? 'underline' : 'none',
-        marginTop: '1vh',
+        color: homeHover ? `${goldColor}` : 'white',
     }
 
     const contactStyle: React.CSSProperties = {
         float: "right",
+        color: aboutHover ? `${goldColor}` : 'white',
         textDecoration: contactHover ? 'underline' : 'none',
-        marginTop: '1vh',
     }
 
     const linksStyle: React.CSSProperties = {
