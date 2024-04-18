@@ -19,10 +19,18 @@ const contactHeaderStyle: React.CSSProperties = {
     flexDirection: "row",
 }
 
+const divStyle: React.CSSProperties = {
+    border: "1px solid #1F2B2E",
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+    padding: '1%',
+}
+
 
 const ContactMethod: React.FC<ContactMethodProps> = ({title, image, description}) => {
     return (
-        <div>
+        <div style={divStyle}>
             <div style={contactHeaderStyle}>
               <motion.img
               src={image}
