@@ -4,6 +4,7 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import ContactMethod from "@/components/Contact/ContactMethod";
 
 
 const contactIntroStyle: React.CSSProperties = {
