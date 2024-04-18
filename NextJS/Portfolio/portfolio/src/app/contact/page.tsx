@@ -74,44 +74,36 @@ export default function Contact() {
           <h1>How to get in touch with me. </h1>
         </div>
         <div style={formsOfContactStyle}>
-          <div style={gitHubStyle}>
-            <div style={contactHeaderStyle}>
-              <motion.img
-              src="/Logos/github.svg"
-              alt="GitHub Logo"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              width={32}
-              height={32} />
-              <h1>GitHub</h1>
-            </div>
-            <p>My GitHub is where I keep all of my projects and code snippets. If you want to see what I'm working on, check out my GitHub.</p>
-          </div>
-          <div style={linkedInStyle}>
-            <h1>LinkedIn</h1>
-            <Image src="/Logos/linkedIn.svg" alt="LinkedIn Logo" width={32} height={32} />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-          <div style={discordStyle}>
-            <h1>Discord</h1>
-            <Image src="/Logos/discord.svg" alt="Discord Logo" width={32} height={32} />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-          </div>
-          <div style={youtubeStyle}>
-            <h1>YouTube</h1>
-            <Image src="/Logos/youtube.svg" alt="YouTube Logo" width={32} height={32} />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-          </div>
-          <div style={twitterStyle}>
-            <h1>Twitter</h1>
-            <Image src="/Logos/twitter.svg" alt="Twitter Logo" width={32} height={32} />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-          </div>
-          <div style={emailStyle}>
-            <h1>Email</h1>
-            <Image src="/Logos/email.svg" alt="Email Logo" width={32} height={32} />
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus nesciunt necessitatibus quis iusto, molestiae veritatis blanditiis deserunt non voluptatibus vitae nisi, laboriosam atque, incidunt esse nihil officiis eligendi aperiam aliquam.</p>
-          </div>
+          <ContactMethod 
+            title="Github"
+            image="/Logos/github.svg"
+            description="My GitHub is where I keep all of my projects and code snippets. If you want to see what I'm working on, check out my GitHub."
+          />
+          <ContactMethod 
+            title="LinkedIn"
+            image="/Logos/linkedIn.svg"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          />
+          <ContactMethod 
+            title="Discord"
+            image="/Logos/discord.svg"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          />
+          <ContactMethod 
+            title="YouTube"
+            image="/Logos/youtube.svg"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          />
+          <ContactMethod 
+            title="Twitter"
+            image="/Logos/twitter.svg"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          />
+          <ContactMethod 
+            title="Email"
+            image="/Logos/email.svg"
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+          />
         </div>
         <Footer />
       </main>
