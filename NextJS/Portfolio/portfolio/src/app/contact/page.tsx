@@ -77,31 +77,37 @@ export default function Contact() {
             title="Github"
             image="/Logos/github.svg"
             description="My GitHub is where I keep all of my projects and code snippets. If you want to see what I'm working on, check out my GitHub."
+            username="placeholder"
           />
           <ContactMethod 
             title="LinkedIn"
             image="/Logos/linkedIn.svg"
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            username="placeholder"
           />
           <ContactMethod 
             title="Discord"
             image="/Logos/discord.svg"
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            username="placeholder"
           />
           <ContactMethod 
             title="YouTube"
             image="/Logos/youtube.svg"
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            username="placeholder"
           />
           <ContactMethod 
             title="Twitter"
             image="/Logos/twitter.svg"
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            username="placeholder"
           />
           <ContactMethod 
             title="Email"
             image="/Logos/email.svg"
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+            username="placeholder"
           />
         </div>
         <Footer />
