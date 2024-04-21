@@ -68,7 +68,16 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
                         <path d="m304 974-56-57 343-343-343-343 56-57 400 400-400 400Z" />
                     </svg>
                 </div>
-            </div> 
+            </div>
+            <div className="indicator">
+                {images.map((_, index) => (
+                    <div
+                        key={index}
+                        className={`dot ${currentIndex === index ? "active" : ""}`}
+                        onClick={() => handlesDotClick(index)}
+                    />
+                ))}
+            </div>
         </div>
     )
 };
