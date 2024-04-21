@@ -52,8 +52,11 @@ const nameStyle: React.CSSProperties = {
 }
 
 const images = [
-    "../Assets/placeholder.png",
-    "./Assets/placeholder.png",
+    "/Assets/placeholder.png",
+    "https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=600",
 ]
 
 const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, description}) => {
@@ -95,14 +98,12 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, descrip
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
             style={leftColumnStyle}>
-                
-                <Image 
-                style={imageStyle} 
-                src={image} 
-                alt={name} 
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-                />
+                <div style={imageStyle}>
+                    <Carousel 
+                        images={images}
+                    />
+                </div>
+
                 <Image
                 style={secondImageStyle} 
                 src={image} 

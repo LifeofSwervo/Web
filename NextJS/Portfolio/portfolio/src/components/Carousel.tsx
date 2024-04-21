@@ -5,6 +5,14 @@ interface CarouselProps {
     images: string[];
 }
 
+const carouselStyle: React.CSSProperties = {
+}
+
+const carouselImageStyle: React.CSSProperties = {
+    width: '300px',
+    height: '150px',
+}
+
 const Carousel: React.FC<CarouselProps> = ({ images }) => {
     
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -42,10 +50,11 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
 
 
     return(
-        <div className="carousel">
+        <div style={carouselStyle}>
             <img
                 key={currentIndex}
                 src={images[currentIndex]}
+                style={carouselImageStyle}
             />
             <div className="slideDirection">
                 <div className="left" onClick={handlePrevious}>
