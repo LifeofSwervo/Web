@@ -5,6 +5,7 @@ import placeholderImage from "../Assets/placeholder.png";
 import Image from "next/image";
 import { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
+import Carousel from "../Carousel";
 
 const goldColor = '#F7D002'; 
 const mintGreenColor = '#D2FDFF';
@@ -49,6 +50,11 @@ const informationStyle: React.CSSProperties = {
 const nameStyle: React.CSSProperties = {
     fontSize: '4.5em'
 }
+
+const images = [
+    "../Assets/placeholder.png",
+    "./Assets/placeholder.png",
+]
 
 const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, description}) => {
     const [isHovered, setIsHovered] = React.useState(false);
@@ -117,7 +123,6 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, descrip
                 >
                     Source Code
                 </motion.button>
-
             </div>
         </div>
     )
