@@ -25,6 +25,7 @@ const titleStyle: React.CSSProperties = {
 const usernameStyle: React.CSSProperties = {
     marginTop: "-2vh",
     fontFamily: "Comic Sans MS",
+    fontWeight: "lighter",
 }
 
 const parentImageStyle: React.CSSProperties = {
@@ -53,7 +54,7 @@ const ContactMethod: React.FC<ContactMethodProps> = ({title, image, description,
                     <motion.img
                     src={image}
                     alt="Logo"
-                    whileHover={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.5 }}
                     whileTap={{ scale: 0.9 }}
                     width={32}
                     height={32}
