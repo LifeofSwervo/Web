@@ -85,7 +85,11 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, descrip
     }
     return (
         <div style={showcaseStyle}>
-            <div style={leftColumnStyle}>
+            <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }} 
+            style={leftColumnStyle}>
+                
                 <Image 
                 style={imageStyle} 
                 src={image} 
@@ -100,7 +104,7 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, descrip
                 onMouseEnter={() => setIsSecondImageHovered(true)}
                 onMouseLeave={() => setIsSecondImageHovered(false)}
                 />
-            </div>
+            </motion.div>
             <div style={informationStyle}>
                 <h2>{name}</h2>
                 <p>{description}</p>

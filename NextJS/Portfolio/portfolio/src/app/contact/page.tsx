@@ -77,7 +77,7 @@ export default function Contact() {
             title="Github"
             image="/Logos/github.svg"
             description="My GitHub is where I keep all of my projects and code snippets. If you want to see what I'm working on, check out my GitHub."
-            username="placeholder"
+            username="LifeOfSwervo"
           />
           <ContactMethod 
             title="LinkedIn"
@@ -107,7 +107,7 @@ export default function Contact() {
             title="Email"
             image="/Logos/email.svg"
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-            username="placeholder"
+            username="SwervoLife@gmail.com"
           />
         </div>
         <Footer />

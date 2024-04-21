@@ -13,30 +13,22 @@ const gitHubStyle: React.CSSProperties = {
 }
 
 const contactHeaderStyle: React.CSSProperties = {
-    display: "grid",
-    gridTemplateColumns: "repeat(2, 1fr)",
-    gridTemplateRows: 'repeat(2, 1fr)',
+    display: "flex",
+    flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    margin: "5% auto auto auto",
 }
 
 const titleStyle: React.CSSProperties = {
-    gridArea: "1 / 2 / 2 / 3",
-    justifyContent: "center",
-    textAlign: "start",
-    marginLeft: "-20%",
 }
 
 const usernameStyle: React.CSSProperties = {
-    gridArea: "2 / 2 / 3 / 3",
-    marginLeft: "-80%",
-    alignContent: "start",
+    marginTop: "-2vh",
+    fontFamily: "Comic Sans MS",
 }
 
 const parentImageStyle: React.CSSProperties = {
-    gridArea: "1 / 1 / 2 / 2",
-    marginLeft: "40%", 
+    marginRight: '1em',
 }
 
 const imageStyle: React.CSSProperties = {
@@ -48,6 +40,8 @@ const divStyle: React.CSSProperties = {
     alignItems: "center",
     textAlign: "center",
     padding: '1%',
+    display: "flex",
+    flexDirection: "column",
 }
 
 
@@ -66,9 +60,8 @@ const ContactMethod: React.FC<ContactMethodProps> = ({title, image, description,
                     style={imageStyle}/>
                 </div>
                 <h1 style={titleStyle}>{title}</h1>
-                <h1></h1>
-                <h2 style={usernameStyle}>@{username}</h2>
             </div>
+            <h2 style={usernameStyle}>@{username}</h2>
             <p>{description}</p>
         </div>
     )
