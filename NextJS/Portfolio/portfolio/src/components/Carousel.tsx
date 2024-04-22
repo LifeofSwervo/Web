@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface CarouselProps {
@@ -13,12 +13,32 @@ const carouselImageStyle: React.CSSProperties = {
     height: '150px',
 }
 
+
+const slideDirectionStyle: React.CSSProperties = {
+    display: "flex",
+    justifyContent: "center",
+}
+
+const rightStyle: React.CSSProperties = {
+    right: "0",
+}
+
+const leftStyle: React.CSSProperties = {
+    left: "0",
+}
+
+const indicatorStyle: React.CSSProperties = {
+    marginTop: "20px",
+    display: "flex",
+    justifyContent: "center",
+}
+
 const Carousel: React.FC<CarouselProps> = ({ images }) => {
     
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    // Helper functions for the carousel component.
 
-// Helper functions
     /**
      * - Handle Next function, handles the next button click.
      * @prevIndex - the previously indexed image. 
@@ -49,6 +69,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
 
 
 
+
     return(
         <div style={carouselStyle}>
             <img
@@ -56,8 +77,11 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
                 src={images[currentIndex]}
                 style={carouselImageStyle}
             />
-            <div className="slideDirection">
-                <div className="left" onClick={handlePrevious}>
+            <div style={slideDirectionStyle}>
+                <div 
+                    style={leftStyle}
+                    className="left" 
+                    onClick={handlePrevious}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         height="20"
@@ -67,7 +91,10 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
                         <path d="M400 976 0 576l400-400 56 57-343 343 343 343-56 57Z" />
                     </svg>
                 </div>
-                <div className="right" onClick={handleNext}>
+                <div
+                    style={rightStyle} 
+                    className="right" 
+                    onClick={handleNext}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         height="20"
@@ -78,7 +105,7 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
                     </svg>
                 </div>
             </div>
-            <div className="indicator">
+            <div style={indicatorStyle}>
                 {images.map((_, index) => (
                     <div
                         key={index}
@@ -90,5 +117,6 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
         </div>
     )
 };
+
 
 export default Carousel;
