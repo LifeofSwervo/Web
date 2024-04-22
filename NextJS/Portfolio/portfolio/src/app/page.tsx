@@ -12,7 +12,6 @@ const richBlack = '#0C1618';
 
 
 const htmlStyle: React.CSSProperties = {
-  backgroundColor: '#006e74',
   fontFamily: 'Poppins, ui-sans-serif',
   color: 'white',
   display: 'flex',
