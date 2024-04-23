@@ -6,6 +6,9 @@ import Image from "next/image";
 import { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 import Carousel from "../Carousel";
+import CarouselImages from "../Carousel/CarouselImages";
+import CarouselControls from "../Carousel/CarouselControls";
+import CarouselIndicators from "../Carousel/CarouselIndicator";
 
 const goldColor = '#F7D002'; 
 const mintGreenColor = '#D2FDFF';
@@ -51,6 +54,10 @@ const nameStyle: React.CSSProperties = {
     fontSize: '4.5em'
 }
 
+
+
+
+
 const images = [
     "/Assets/placeholder.png",
     "https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=600",
@@ -63,6 +70,7 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, descrip
     const [isHovered, setIsHovered] = React.useState(false);
     const [buttonIsHovered, setButtonIsHovered] = React.useState(false);
     const [isSecondImageHovered, setIsSecondImageHovered] = React.useState(false);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     const imageStyle: React.CSSProperties = {
         borderRadius: '2%',
@@ -92,6 +100,36 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, descrip
         fontSize: '0.7em',
         textDecoration: buttonIsHovered ? 'underline' : 'none',
     }
+
+    /**
+     * - Handle Next function, handles the next button click.
+     * @prevIndex - the previously indexed image. 
+     */
+    const handleNext = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex + 1 === images.length ? 0 : prevIndex + 1 // Checks if end of images array has been reached. If so returns to first image. 
+        );
+    }
+
+    /**
+     * - Handle Previous function, handles the previous button click.
+     * @prevIndex - the previously indexed image. 
+     */
+    const handlePrevious = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1  // Checks if beginning of images array has been reached. If so returns to last image.
+        );
+    };
+
+    /**
+     * - Handles the Dot Click function. Handles the routing of the carousel when a dot is clicked.
+     * @param index - Number, the index of the image that was clicked.
+     */
+    const handlesDotClick = (index: number) => {
+        setCurrentIndex(index);
+    }
+
+
     return (
         <div style={showcaseStyle}>
             <motion.div
@@ -99,8 +137,9 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, descrip
             whileTap={{ scale: 0.9 }} 
             style={leftColumnStyle}>
                 <div style={imageStyle}>
-                    <Carousel 
+                    <CarouselImages
                         images={images}
+                        currentIndex={currentIndex}
                     />
                 </div>
 
@@ -124,6 +163,15 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, descrip
                 >
                     Source Code
                 </motion.button>
+                <CarouselControls 
+                    handlePrevious={handlePrevious}
+                    handleNext={handleNext}
+                />
+                <CarouselIndicators
+                    images={images}
+                    currentIndex={currentIndex}
+                    handlesDotClick={handlesDotClick}
+                />
             </div>
         </div>
     )
