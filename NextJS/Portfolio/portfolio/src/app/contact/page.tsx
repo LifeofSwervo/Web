@@ -30,42 +30,6 @@ const formsOfContactStyle: React.CSSProperties = {
   margin: "10vh 15vw"
 }
 
-const contactHeaderStyle: React.CSSProperties = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  flexDirection: "row",
-}
-
-const gitHubStyle: React.CSSProperties = {
-  gridArea: "1 / 1 / 2 / 2",
-}
-
-const linkedInStyle: React.CSSProperties = {
-  gridArea: "1 / 2 / 2 / 3",
-}
-
-const discordStyle: React.CSSProperties = {
-  gridArea: "1 / 3 / 2 / 4",
-}
-
-const discordLogoStyle: React.CSSProperties = {
-  height: '32px',
-  width: '32px',
-}
-
-const youtubeStyle: React.CSSProperties = {
-  gridArea: "2 / 1 / 3 / 2",
-}
-
-const twitterStyle: React.CSSProperties = {
-  gridArea: "2 / 2 / 3 / 3",
-}
-
-const emailStyle: React.CSSProperties = {
-  gridArea: "2 / 3 / 3 / 4",
-}
-
 export default function Contact() {
     return (
       <main>

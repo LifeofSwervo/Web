@@ -21,6 +21,7 @@ interface ProjectsShowcaseProps {
     description: string;
 }
 
+
 const showcaseStyle: React.CSSProperties = {
     display: 'grid',
     gridTemplateColumns: 'repeat(2, 1fr)',
@@ -163,15 +164,12 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, descrip
                 >
                     Source Code
                 </motion.button>
-                <CarouselControls 
-                    handlePrevious={handlePrevious}
-                    handleNext={handleNext}
-                />
                 <CarouselIndicators
                     images={images}
                     currentIndex={currentIndex}
                     handlesDotClick={handlesDotClick}
                 />
+                
             </div>
         </div>
     )

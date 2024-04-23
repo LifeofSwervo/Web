@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import Projects from "@/components/Home/Projects";
 import Summary from "@/components/Home/Summary";
 import Introduction from "@/components/Home/Introduction";
-import Carousel from "@/components/Carousel";
 
 const richBlack = '#0C1618';
 
@@ -34,7 +33,6 @@ export default function Home() {
       <Introduction />
       <Summary />
       <Projects />
-      <Carousel images={images} />
       <Footer />
     </main>
   );
