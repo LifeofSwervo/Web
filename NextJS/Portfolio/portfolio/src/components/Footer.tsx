@@ -1,5 +1,10 @@
 import Image from "next/image";
 import Logo from "../../public/bitmap.svg";
+import Link from "next/link";
+import React from "react";
+
+const goldColor = '#F7D002'; 
+const violetColor = '#4B244A'
 
 const footerStyle: React.CSSProperties = {
     backgroundColor: "#748386",
@@ -57,6 +62,25 @@ const copyRightStyle: React.CSSProperties = {
 }
 
 const Footer = () => {
+    const [homeHover, setHomeHover] = React.useState(false);
+    const [aboutHover, setAboutHover] = React.useState(false);
+    const [contactHover, setContactHover] = React.useState(false);
+
+    const homeStyle: React.CSSProperties = {
+        textDecoration: homeHover ? 'underline' : 'none',
+        color: homeHover ? `${violetColor}` : 'white',
+    }
+
+    const contactStyle: React.CSSProperties = {
+        color: contactHover ? `${violetColor}` : 'white',
+        textDecoration: contactHover ? 'underline' : 'none',
+    }
+
+    const aboutStyle: React.CSSProperties = {
+        textDecoration: aboutHover ? 'underline' : 'none',
+        color: aboutHover ? `${violetColor}` : 'white',
+    }
+
     return (
         <footer style={footerStyle} >
             <div style={footerContentStyle}>
@@ -65,10 +89,29 @@ const Footer = () => {
                 </div>
                 <div>
                     <ul style={ulStyle}>
-                        <li style={liStyle}>Home</li>
-                        <li style={liStyle}>Showcase</li>
-                        <li style={liStyle}>About</li>
-                        <li style={liStyle}>Contact</li>
+                        <li 
+                        style={liStyle}
+                        onMouseEnter={() => setHomeHover(true)}
+                        onMouseLeave={() => setHomeHover(false)}>
+                            <Link href="/" style={homeStyle}>Home</Link>
+                        </li>
+                        <li 
+                        style={liStyle}
+                        >
+                            Showcase
+                        </li>
+                        <li 
+                        style={liStyle}
+                        onMouseEnter={() => setAboutHover(true)} 
+                        onMouseLeave={() => setAboutHover(false)}>
+                            <Link href="about" style={aboutStyle}>About</Link>
+                        </li>
+                        <li 
+                        style={liStyle}
+                        onMouseEnter={() => setContactHover(true)} 
+                        onMouseLeave={() => setContactHover(false)}>
+                            <Link href="about" style={contactStyle}>Contact</Link>
+                        </li>
                     </ul>
                 </div>
             </div>

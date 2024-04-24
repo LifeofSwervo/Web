@@ -7,6 +7,7 @@ import Logo from "../../public/navBarLogo.svg";
 
 
 const goldColor = '#F7D002'; 
+const violetColor = '#4B244A'
 
 const NavBar = () => {
     const [homeHover, setHomeHover] = React.useState(false);
@@ -55,12 +56,14 @@ const NavBar = () => {
         float: "right",
         textDecoration: homeHover ? 'underline' : 'none',
         color: homeHover ? `${goldColor}` : 'white',
+        margin: 'auto 3vw'
     }
 
     const contactStyle: React.CSSProperties = {
         float: "right",
         color: contactHover ? `${goldColor}` : 'white',
         textDecoration: contactHover ? 'underline' : 'none',
+        margin: 'auto 3vw'
     }
 
     const linksStyle: React.CSSProperties = {
@@ -85,6 +88,12 @@ const NavBar = () => {
             <ul style={ulStyle}>
                 <li 
                 style={linksStyle} 
+                onMouseEnter={() => setHomeHover(true)} 
+                onMouseLeave={() => setHomeHover(false)}>
+                    <Link href="/" style={homeStyle}>Home</Link>
+                </li>
+                <li 
+                style={linksStyle} 
                 onMouseEnter={() => setContactHover(true)} 
                 onMouseLeave={() => setContactHover(false)}>
                     <a href="contact" style={contactStyle}>Contact</a>
@@ -95,12 +104,7 @@ const NavBar = () => {
                 onMouseLeave={() => setAboutHover(false)}>
                     <a href="about" style={aboutStyle}>About</a>
                 </li>
-                <li 
-                style={linksStyle} 
-                onMouseEnter={() => setHomeHover(true)} 
-                onMouseLeave={() => setHomeHover(false)}>
-                    <Link href="/" style={homeStyle}>Home</Link>
-                </li>
+                
             </ul>
         </nav>
     );
