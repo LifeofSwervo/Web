@@ -104,8 +104,9 @@ const Introduction = () => {
             c.fillStyle = 'black'
             c.fillRect(0, 0, canvas.width, canvas.height)
             particles.forEach((particle, index) => {
-                if (particle.position.y > canvas.height) {
-                    particles.splice(index, 1)
+                if(particle.position.y - particle.radius >= canvas.height) {
+                    particle.position.x = Math.random() * canvas.width
+                    particle.position.y = -particle.radius
                 } else {
                     particle.update()
                 }
