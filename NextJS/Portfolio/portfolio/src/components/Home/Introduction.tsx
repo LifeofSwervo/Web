@@ -95,13 +95,13 @@ const Introduction = () => {
                 position: {x: Math.random() * canvas.width, y: Math.random() * canvas.height},
                 velocity: {x: 0, y: 0.3}, 
                 radius: Math.random() * 2, 
-                color: 'white',
+                color: '#D2FDFF',
             }))
         }
 
         function animate() {
             requestAnimationFrame(animate);
-            c.fillStyle = 'black'
+            c.fillStyle = '#0C1618'
             c.fillRect(0, 0, canvas.width, canvas.height)
             particles.forEach((particle, index) => {
                 if(particle.position.y - particle.radius >= canvas.height) {
