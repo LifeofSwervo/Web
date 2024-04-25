@@ -3,44 +3,19 @@ import ProjectsShowcase from "./ProjectsShowcase"
 import placeholderImage from "../../Assets/placeholder.png";
 import theBistroCafe from "../../Assets/placeholder.png";
 
+const projectsStyle: React.CSSProperties = {
+    alignItems: 'center',
+    justifyContent: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    backgroundColor: "#0C1618",
+}
 
+const showcaseDescriptionStyle: React.CSSProperties = {
+    marginBottom: '10vh'
+}
 
 const Projects = () => {
-    const projectsStyle: React.CSSProperties = {
-        alignItems: 'center',
-        justifyContent: 'center',
-        display: 'flex',
-        flexDirection: 'column',
-        backgroundColor: "#0C1618",
-    }
-
-    const showcaseStyle: React.CSSProperties = {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(2, 1fr)',
-        gridTemplateRows: 'repeat(1, 1fr)',
-        gridColumnGap: '1em',
-        gridRowGap: '1em',
-     
-    }
-
-    const leftColumnStyle: React.CSSProperties = {
-        flex: 1,
-        marginRight: '30vh',
-    }
-
-    const rightColumnStyle: React.CSSProperties = {
-        flex: 1,
-    }
-
-    const imageStyle: React.CSSProperties = {
-        borderRadius: '12px',
-        objectFit: 'contain',
-    }
-
-    const showcaseDescriptionStyle: React.CSSProperties = {
-        marginBottom: '10vh'
-    }
-
     return (
         <div style={projectsStyle}>
             <h1>Projects I've made.</h1>

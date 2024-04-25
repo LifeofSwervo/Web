@@ -11,6 +11,8 @@ const introStyle: React.CSSProperties = {
     display: "flex",
     height: "100vh",
     fontFamily: 'Poppins, ui-sans-serif',
+    borderBottom: '1px solid #D2FDFF',
+    
 }
 const headingStyle: React.CSSProperties = {
     fontSize: "3em",
@@ -85,8 +87,6 @@ const Introduction = () => {
             }
         }
 
-        
-
         const particles: Particle[] = [];
 
         // Stars on Screen
@@ -94,7 +94,7 @@ const Introduction = () => {
             particles.push(new Particle({ 
                 position: {x: Math.random() * canvas.width, y: Math.random() * canvas.height},
                 velocity: {x: 0, y: 0.3}, 
-                radius: Math.random() * 2, 
+                radius: Math.random() * 5, 
                 color: '#D2FDFF',
             }))
         }
@@ -104,6 +104,7 @@ const Introduction = () => {
             c.fillStyle = '#0C1618'
             c.fillRect(0, 0, canvas.width, canvas.height)
             particles.forEach((particle, index) => {
+                // Places particles off element to the beginning of the screen.
                 if(particle.position.y - particle.radius >= canvas.height) {
                     particle.position.x = Math.random() * canvas.width
                     particle.position.y = -particle.radius
@@ -115,9 +116,6 @@ const Introduction = () => {
 
         animate();
     })
-
-
-
 
     return (
         <div style={introStyle}>

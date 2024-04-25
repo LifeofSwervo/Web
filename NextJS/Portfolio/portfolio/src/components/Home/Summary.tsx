@@ -1,29 +1,23 @@
 import summaryPhoto from '../../Assets/SummaryPhoto.jpeg';
 import Image from 'next/image';
 
+const imageStyle: React.CSSProperties = {
+    width: "15vh",
+    height: "15vh",
+    objectFit: "cover",
+    borderRadius: "50%",
+}
+
+const summaryStyle: React.CSSProperties = {
+    height: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "0% 25%",
+    backgroundColor: "#0C1618",
+}
+
 const Summary = () => {
-    const summaryBorder: React.CSSProperties = {
-        border: "3px solid black",
-        borderRadius: "50%",
-    }
-
-    const imageStyle: React.CSSProperties = {
-        width: "15vh",
-        height: "15vh",
-        objectFit: "cover",
-        borderRadius: "50%",
-    }
-
-    const summaryStyle: React.CSSProperties = {
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        padding: "0% 25%",
-        backgroundColor: "#0C1618",
-    }
-
-
     return (
         <div style={summaryStyle}>
             <div>

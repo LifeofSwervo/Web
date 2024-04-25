@@ -41,7 +41,6 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
 
     /**
      * - Handle Next function, handles the next button click.
-     * @prevIndex - the previously indexed image. 
      */
     const handleNext = () => {
         setCurrentIndex((prevIndex) =>
@@ -51,7 +50,6 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
 
     /**
      * - Handle Previous function, handles the previous button click.
-     * @prevIndex - the previously indexed image. 
      */
     const handlePrevious = () => {
         setCurrentIndex((prevIndex) =>
