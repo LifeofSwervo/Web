@@ -28,7 +28,6 @@ const leftStyle: React.CSSProperties = {
 }
 
 const indicatorStyle: React.CSSProperties = {
-    marginTop: "20px",
     display: "flex",
     justifyContent: "center",
 }

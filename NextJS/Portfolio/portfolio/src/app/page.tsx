@@ -18,6 +18,15 @@ const htmlStyle: React.CSSProperties = {
   minHeight: '100vh',
 }
 
+const mainContainerStyle: React.CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  backgroundColor: richBlack,
+
+}
+
 const images = [
   `${placeholder}`,
   `${placeholder}`,
@@ -29,6 +38,9 @@ const images = [
 export default function Home() {
   return (
     <main style={htmlStyle}>
+      <div style={mainContainerStyle}>
+
+      </div>
       <NavBar />
       <Introduction />
       <Summary />

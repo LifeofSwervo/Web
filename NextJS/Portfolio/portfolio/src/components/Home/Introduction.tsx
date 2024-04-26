@@ -11,7 +11,6 @@ const introStyle: React.CSSProperties = {
     display: "flex",
     height: "100vh",
     fontFamily: 'Poppins, ui-sans-serif',
-    borderBottom: '1px solid #D2FDFF',
     
 }
 const headingStyle: React.CSSProperties = {

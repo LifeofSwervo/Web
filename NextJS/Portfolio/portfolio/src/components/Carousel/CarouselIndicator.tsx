@@ -8,9 +8,11 @@ interface CarouselIndicatorsProps {
 }
 
 const indicatorStyle: React.CSSProperties = {
-    marginTop: "20px",
     display: "flex",
     justifyContent: "center",
+    marginRight: "1em",
+    paddingRight: "1em",
+    borderRight: "1px solid #1F2B2E",
 }
 
 const CarouselIndicators: React.FC<CarouselIndicatorsProps> = ({ images, currentIndex, handlesDotClick }) => {

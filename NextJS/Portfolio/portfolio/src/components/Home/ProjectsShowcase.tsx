@@ -67,6 +67,13 @@ const images = [
     "https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=600",
 ]
 
+const navigationDivStyle: React.CSSProperties = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+}
+
 const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, description}) => {
     const [isHovered, setIsHovered] = React.useState(false);
     const [buttonIsHovered, setButtonIsHovered] = React.useState(false);
@@ -155,21 +162,22 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, descrip
             <div style={informationStyle}>
                 <h2>{name}</h2>
                 <p>{description}</p>
-                <motion.button 
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                style={buttonStyle} 
-                onHoverStart={() => setButtonIsHovered(true)}
-                onHoverEnd={() => setButtonIsHovered(false)}
-                >
-                    Source Code
-                </motion.button>
-                <CarouselIndicators
-                    images={images}
-                    currentIndex={currentIndex}
-                    handlesDotClick={handlesDotClick}
-                />
-                
+                <div style={navigationDivStyle}>
+                    <CarouselIndicators
+                        images={images}
+                        currentIndex={currentIndex}
+                        handlesDotClick={handlesDotClick}
+                    />
+                    <motion.button 
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    style={buttonStyle} 
+                    onHoverStart={() => setButtonIsHovered(true)}
+                    onHoverEnd={() => setButtonIsHovered(false)}
+                    >
+                        Source Code
+                    </motion.button>
+                </div>
             </div>
         </div>
     )
