@@ -6,6 +6,9 @@ import Footer from "@/components/Footer";
 import Projects from "@/components/Home/Projects";
 import Summary from "@/components/Home/Summary";
 import Introduction from "@/components/Home/Introduction";
+import Particles from "@tsparticles/react";
+import particlesConfig from "../../public/Logos/Dummy files/particlesjs-config.json";
+import ParticleBackground from "@/components/ParticleBackground";
 
 const richBlack = '#0C1618';
 
@@ -24,7 +27,6 @@ const mainContainerStyle: React.CSSProperties = {
   justifyContent: 'center',
   alignItems: 'center',
   backgroundColor: richBlack,
-
 }
 
 const images = [
@@ -38,13 +40,15 @@ const images = [
 export default function Home() {
   return (
     <main style={htmlStyle}>
-      <div style={mainContainerStyle}>
-
-      </div>
       <NavBar />
-      <Introduction />
-      <Summary />
-      <Projects />
+      <div style={{ position: 'relative' }}>
+        <ParticleBackground />
+      </div>
+      <div style={mainContainerStyle}>
+        <Introduction />
+        <Summary />
+        <Projects />
+      </div>
       <Footer />
     </main>
   );
