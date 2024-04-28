@@ -8,7 +8,8 @@ const projectsStyle: React.CSSProperties = {
     justifyContent: 'center',
     display: 'flex',
     flexDirection: 'column',
-    backgroundColor: "#0C1618",
+    zIndex: 3,
+    
 }
 
 const showcaseDescriptionStyle: React.CSSProperties = {

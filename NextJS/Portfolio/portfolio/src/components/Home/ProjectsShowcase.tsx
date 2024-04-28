@@ -67,6 +67,13 @@ const images = [
     "https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=600",
 ]
 
+const images2 = [
+    "/Assets/placeholder.png",
+    "/Assets/placeholder.png",
+    "/Assets/placeholder.png",
+    "/Assets/placeholder.png",
+]
+
 const navigationDivStyle: React.CSSProperties = {
     display: 'flex',
     justifyContent: 'center',
@@ -150,14 +157,12 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, descrip
                         currentIndex={currentIndex}
                     />
                 </div>
-
-                <Image
-                style={secondImageStyle} 
-                src={image} 
-                alt={name} 
-                onMouseEnter={() => setIsSecondImageHovered(true)}
-                onMouseLeave={() => setIsSecondImageHovered(false)}
-                />
+                <div style={secondImageStyle}>
+                    <CarouselImages
+                        images={images2}
+                        currentIndex={currentIndex}
+                    />
+                </div>
             </motion.div>
             <div style={informationStyle}>
                 <h2>{name}</h2>

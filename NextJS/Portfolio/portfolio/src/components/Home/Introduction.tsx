@@ -123,8 +123,8 @@ const Introduction = () => {
     return (
         <div style={introStyle}>
             <canvas style={canvasStyle}></canvas>
-            <h1 style={headingStyle}>Aspiring Software Engineer</h1>
-            <p style={textStyle}>This is my website. I am an aspiring software engineer currently in college and working full time.</p>
+            <h1 style={headingStyle}>Nameless Dev</h1>
+            <p style={textStyle}>I am Nameless Dev, an aspiring software engineer. This is my website. I am in college and working full time.</p>
         </div>
     );
 }

@@ -30,7 +30,7 @@ const NavBar = () => {
         position: "fixed",
         width: "100%",
         top: 0,
-        zIndex: 40,
+        zIndex: 4,
     }
 
     const ulStyle: React.CSSProperties = {

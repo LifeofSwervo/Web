@@ -15,6 +15,7 @@ const footerStyle: React.CSSProperties = {
     margin: 'auto auto',
     color: 'white',
     borderTop: "2px solid #D2FDFF",
+    zIndex: 4,
 }
 
 const footerContentStyle: React.CSSProperties = {

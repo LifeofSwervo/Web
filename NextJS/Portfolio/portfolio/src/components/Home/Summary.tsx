@@ -6,6 +6,7 @@ const imageStyle: React.CSSProperties = {
     height: "15vh",
     objectFit: "cover",
     borderRadius: "50%",
+    zIndex: 3,
 }
 
 const summaryStyle: React.CSSProperties = {
@@ -14,7 +15,8 @@ const summaryStyle: React.CSSProperties = {
     justifyContent: "center",
     alignItems: "center",
     padding: "0% 25%",
-    backgroundColor: "#0C1618",
+    zIndex: 3,
+
 }
 
 const Summary = () => {

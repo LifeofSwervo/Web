@@ -6,10 +6,7 @@ import {
   MoveDirection,
   OutMode,
 } from "@tsparticles/engine";
-// import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
-// import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
-// import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
 const ParticleBackground = () => {
   const [init, setInit] = useState(false);
@@ -17,7 +14,7 @@ const ParticleBackground = () => {
   // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
+        await loadSlim(engine);
       //await loadBasic(engine);
     }).then(() => {
       setInit(true);
@@ -45,7 +42,7 @@ const ParticleBackground = () => {
                 type: "circle",
                 stroke: {
                     width: 0,
-                    color: "#000000",
+                    color: "#D2FDFF",
                 },
                 polygon: {
                     nbSides: 5,
@@ -74,25 +71,25 @@ const ParticleBackground = () => {
             line_linked: {
                 enable: true,
                 distance: 150,
-                color: "#ffffff",
+                color: "#4B244A",
                 opacity: 1,
                 width: 5,
             },
             links: {
                 enable: true,
-                distance: 150,
-                color: "#ffffff",
-                opacity: 0.4,
+                distance: 300,
+                color: "#4B244A",
+                opacity: 0.9,
                 width: 1,
               },
             move: {
                 enable: true,
                 direction: "none",
                 random: true,
-                speed: 1,
+                speed: 3,
                 straight: false,
                 outMode: "out",
-                bounce: false,
+                bounce: true,
                 attract: {
                     enable: false,
                     rotateX: 600,
@@ -100,7 +97,7 @@ const ParticleBackground = () => {
                 }
             },
         },
-        fpsLimit: 120,
+        fpsLimit: 60,
         interactivity: {
             events: {
                 onClick: {
@@ -127,11 +124,11 @@ const ParticleBackground = () => {
                     speed: 3
                 },
                 repulse: {
-                    distance: 200,
+                    distance: 75,
                     duration: 0.4,
                 },
                 push: {
-                    quantity: 4,
+                    quantity: 2,
                 },
                 remove: {
                     particles_nb: 2,
