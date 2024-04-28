@@ -34,6 +34,9 @@ const textStyle: React.CSSProperties = {
 }
 
 const Introduction = () => {
+    /**
+     * 
+     
     useEffect(() => {
         const canvas : HTMLCanvasElement = document.querySelector('canvas')!;
         let c: CanvasRenderingContext2D = canvas.getContext('2d')!;
@@ -115,6 +118,7 @@ const Introduction = () => {
 
         animate();
     })
+    */
 
     return (
         <div style={introStyle}>

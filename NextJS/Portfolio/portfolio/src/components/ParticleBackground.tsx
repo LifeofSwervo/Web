@@ -83,6 +83,13 @@ const ParticleBackground = () => {
                 opacity: 1,
                 width: 5,
             },
+            links: {
+                enable: true,
+                distance: 150,
+                color: "#ffffff",
+                opacity: 0.4,
+                width: 1,
+              },
             move: {
                 enable: true,
                 direction: "none",
