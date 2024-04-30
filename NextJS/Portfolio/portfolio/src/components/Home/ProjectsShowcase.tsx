@@ -148,23 +148,27 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({images, images2, nam
 
     return (
         <div style={showcaseStyle}>
-            <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }} 
+            <div
             style={leftColumnStyle}>
-                <div style={imageStyle}>
+                <motion.div 
+                style={imageStyle}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}>
                     <CarouselImages
                         images={images}
                         currentIndex={currentIndex}
                     />
-                </div>
-                <div style={secondImageStyle}>
+                </motion.div>
+                <motion.div 
+                style={secondImageStyle}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}>
                     <CarouselImages
                         images={images2}
                         currentIndex={currentIndex}
                     />
-                </div>
-            </motion.div>
+                </motion.div>
+            </div>
             <div style={informationStyle}>
                 <h2>{name}</h2>
                 <p>{description}</p>
