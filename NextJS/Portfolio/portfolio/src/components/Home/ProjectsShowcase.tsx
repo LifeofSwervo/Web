@@ -16,7 +16,8 @@ const purpleColor = '#4B244A';
 const lightPurpleColor = '#7B4E78';
 
 interface ProjectsShowcaseProps {
-    image: StaticImageData;
+    images: string[];
+    images2: string[];
     name: string;
     description: string;
 }
@@ -60,16 +61,16 @@ const nameStyle: React.CSSProperties = {
 
 
 const images = [
+    "/Assets/BistroCafeHome.png",
+    "/Assets/BistroCafeSpecials.png",
     "/Assets/placeholder.png",
-    "https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "/Assets/placeholder.png",
+    "/Assets/placeholder.png",
 ]
 
 const images2 = [
-    "/Assets/placeholder.png",
-    "/Assets/placeholder.png",
+    "/Assets/BistroCafeHistory.png",
+    "/Assets/BistroCafeHome.png",
     "/Assets/placeholder.png",
     "/Assets/placeholder.png",
 ]
@@ -81,7 +82,7 @@ const navigationDivStyle: React.CSSProperties = {
     flexDirection: 'row',
 }
 
-const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({image, name, description}) => {
+const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({images, images2, name, description}) => {
     const [isHovered, setIsHovered] = React.useState(false);
     const [buttonIsHovered, setButtonIsHovered] = React.useState(false);
     const [isSecondImageHovered, setIsSecondImageHovered] = React.useState(false);
