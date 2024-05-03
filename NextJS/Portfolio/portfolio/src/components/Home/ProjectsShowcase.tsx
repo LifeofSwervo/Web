@@ -152,7 +152,7 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({images, images2, nam
             style={leftColumnStyle}>
                 <motion.div 
                 style={imageStyle}
-                whileHover={{ scale: 1.18 }}
+                whileHover={{ scale: 1.14 }}
                 whileTap={{ scale: 0.9 }}>
                     <CarouselImages
                         images={images}
@@ -161,7 +161,7 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({images, images2, nam
                 </motion.div>
                 <motion.div 
                 style={secondImageStyle}
-                whileHover={{ scale: 1.18 }}
+                whileHover={{ scale: 1.14 }}
                 whileTap={{ scale: 0.9 }}>
                     <CarouselImages
                         images={images2}

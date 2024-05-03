@@ -70,7 +70,7 @@ const Projects = () => {
                 <ProjectsShowcase 
                     images={SpaceInvaders}
                     images2={SpaceInvaders2}
-                    name="Placeholder"
+                    name="Space Invaders demo"
                     description="Loren Ipsum"
                 />
             </div>
