@@ -40,37 +40,37 @@ export default function Contact() {
         <div style={formsOfContactStyle}>
           <ContactMethod 
             title="Github"
-            image="/Logos/github.svg"
+            image="/Logos/ContactLogos/github.svg"
             description="My GitHub is where I keep all of my projects and code snippets. If you want to see what I'm working on, check out my GitHub."
             username="LifeOfSwervo"
           />
           <ContactMethod 
             title="LinkedIn"
-            image="/Logos/linkedIn.svg"
+            image="/Logos/ContactLogos/linkedIn.svg"
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-            username="placeholder"
+            username="Clarence Thomas"
           />
           <ContactMethod 
             title="Discord"
-            image="/Logos/discord.svg"
+            image="/Logos/ContactLogos/discord.svg"
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-            username="placeholder"
+            username="Lifeofswervo"
           />
           <ContactMethod 
             title="YouTube"
-            image="/Logos/youtube.svg"
+            image="/Logos/ContactLogos/youtube.svg"
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
             username="placeholder"
           />
           <ContactMethod 
             title="Twitter"
-            image="/Logos/twitter.svg"
+            image="/Logos/ContactLogos/twitter.svg"
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-            username="placeholder"
+            username="Swervo_Life"
           />
           <ContactMethod 
             title="Email"
-            image="/Logos/email.svg"
+            image="/Logos/ContactLogos/email.svg"
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
             username="SwervoLife@gmail.com"
           />

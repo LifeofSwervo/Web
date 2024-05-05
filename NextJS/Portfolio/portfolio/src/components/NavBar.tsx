@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from 'next/link';
 import React, { useState } from 'react';
-import Logo from "../../public/navBarLogo.svg";
+import Logo from "../../public/Logos/navBarLogo.svg";
 
 
 const goldColor = '#F7D002'; 
