@@ -6,7 +6,19 @@ import Footer from "@/components/Footer";
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import ContactMethod from "@/components/Contact/ContactMethod";
+import ParticleBackground from "@/components/ParticleBackground";
 
+const mainStyle: React.CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+}
+
+const particleDivStyle: React.CSSProperties = {
+  position: 'relative',
+  zIndex: 1,
+}
 
 const contactIntroStyle: React.CSSProperties = {
   backgroundColor: '#0C1618',
@@ -27,13 +39,17 @@ const formsOfContactStyle: React.CSSProperties = {
   gridTemplateColumns: "repeat(2, 1fr)",
   gridTemplateRows: "repeat(3, 1fr)",
   color: "white",
-  margin: "10vh 15vw"
+  margin: "10vh 15vw",
+  zIndex: 2,
 }
 
 export default function Contact() {
     return (
-      <main>
+      <main style={mainStyle}>
         <NavBar />
+        <div style={particleDivStyle}>
+          <ParticleBackground />
+        </div>
         <div style={contactIntroStyle}>
           <h1>How to get in touch with me. </h1>
         </div>
