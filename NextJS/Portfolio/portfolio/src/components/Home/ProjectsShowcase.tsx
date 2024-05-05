@@ -9,6 +9,7 @@ import Carousel from "../Carousel";
 import CarouselImages from "../Carousel/CarouselImages";
 import CarouselControls from "../Carousel/CarouselControls";
 import CarouselIndicators from "../Carousel/CarouselIndicator";
+import Link from "next/link";
 
 const goldColor = '#F7D002'; 
 const mintGreenColor = '#D2FDFF';
@@ -179,16 +180,16 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({images, images2, nam
                         currentIndex={currentIndex}
                         handlesDotClick={handlesDotClick}
                     />
+                    <Link href={linkToCode}>
                     <motion.button 
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                     style={buttonStyle} 
                     onHoverStart={() => setButtonIsHovered(true)}
-                    onHoverEnd={() => setButtonIsHovered(false)}
-                    onClick={linkToCode}
-                    >
+                    onHoverEnd={() => setButtonIsHovered(false)}>
                         Source Code
                     </motion.button>
+                    </Link>
                 </div>
             </div>
         </div>
