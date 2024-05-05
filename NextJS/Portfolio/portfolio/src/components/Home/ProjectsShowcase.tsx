@@ -20,6 +20,7 @@ interface ProjectsShowcaseProps {
     images2: string[];
     name: string;
     description: string;
+    linkToCode: string;
 }
 
 
@@ -82,7 +83,7 @@ const navigationDivStyle: React.CSSProperties = {
     flexDirection: 'row',
 }
 
-const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({images, images2, name, description}) => {
+const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({images, images2, name, description, linkToCode}) => {
     const [isHovered, setIsHovered] = React.useState(false);
     const [buttonIsHovered, setButtonIsHovered] = React.useState(false);
     const [isSecondImageHovered, setIsSecondImageHovered] = React.useState(false);
@@ -184,6 +185,7 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({images, images2, nam
                     style={buttonStyle} 
                     onHoverStart={() => setButtonIsHovered(true)}
                     onHoverEnd={() => setButtonIsHovered(false)}
+                    onClick={linkToCode}
                     >
                         Source Code
                     </motion.button>

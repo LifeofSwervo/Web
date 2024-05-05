@@ -12,13 +12,11 @@ import ParticleBackground from "@/components/ParticleBackground";
 
 const richBlack = '#0C1618';
 
-
-const htmlStyle: React.CSSProperties = {
-  fontFamily: 'Poppins, ui-sans-serif',
-  color: 'white',
+const mainStyle: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
-  minHeight: '100vh',
+  justifyContent: 'center',
+  alignItems: 'center',
 }
 
 const mainContainerStyle: React.CSSProperties = {
@@ -39,7 +37,7 @@ const images = [
 
 export default function Home() {
   return (
-    <main style={htmlStyle}>
+    <main style={mainStyle}>
       <NavBar />
       <div style={{ position: 'relative' }}>
         <ParticleBackground />
