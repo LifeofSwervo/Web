@@ -21,6 +21,7 @@ interface ProjectsShowcaseProps {
     images2: string[];
     name: string;
     description: string;
+    techUsed: string;
     linkToCode: string;
 }
 
@@ -84,7 +85,13 @@ const navigationDivStyle: React.CSSProperties = {
     flexDirection: 'row',
 }
 
-const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({images, images2, name, description, linkToCode}) => {
+const descriptionStyle: React.CSSProperties = {
+    marginBottom: '4em',
+    lineHeight: '1.8em',
+    marginRight: '1.25em'
+}
+
+const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({images, images2, name, description, techUsed, linkToCode}) => {
     const [isHovered, setIsHovered] = React.useState(false);
     const [buttonIsHovered, setButtonIsHovered] = React.useState(false);
     const [isSecondImageHovered, setIsSecondImageHovered] = React.useState(false);
@@ -96,7 +103,7 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({images, images2, nam
         width: '300px',
         height: '150px',
         border: isHovered ? `2px solid ${goldColor}` : '2px solid #D2FDFF',
-        marginBottom: '1em',
+        marginBottom: '3em',
     }
 
     const secondImageStyle: React.CSSProperties = { // New style object
@@ -173,7 +180,10 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({images, images2, nam
             </div>
             <div style={informationStyle}>
                 <h2>{name}</h2>
-                <p>{description}</p>
+                <ul>
+                    <li style={descriptionStyle}>{description}</li>
+                    <li>{techUsed}</li>
+                </ul>
                 <div style={navigationDivStyle}>
                     <CarouselIndicators
                         images={images}
