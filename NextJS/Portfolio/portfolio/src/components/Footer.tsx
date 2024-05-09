@@ -9,7 +9,7 @@ const goldColor = '#F7D002';
 const violetColor = '#4B244A'
 
 const footerStyle: React.CSSProperties = {
-    backgroundColor: "#748386",
+    backgroundColor: "#5E666A",
     alignItems: 'center',
     padding: '1vh 5% 1vh 5%',
     margin: 'auto auto',
