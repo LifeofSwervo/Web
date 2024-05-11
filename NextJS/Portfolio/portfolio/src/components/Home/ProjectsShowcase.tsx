@@ -190,7 +190,9 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({images, images2, nam
                         currentIndex={currentIndex}
                         handlesDotClick={handlesDotClick}
                     />
-                    <Link href={linkToCode}>
+                    <a 
+                    href={linkToCode}
+                    target="_blank">
                     <motion.button 
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -199,7 +201,7 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({images, images2, nam
                     onHoverEnd={() => setButtonIsHovered(false)}>
                         Source Code
                     </motion.button>
-                    </Link>
+                    </a>
                 </div>
             </div>
         </div>
