@@ -61,7 +61,7 @@ const Projects = () => {
                     name="The Bistro Cafe"
                     description="This is one of the first milestone&#39;s in my journey through web development, being one of my initial projects crafted exclusively with HTML, CSS, and Javascript.  For this project I gained experience making the logo&#39;s from scratch (using GIMP).  Looking back at this project I can see how far I have come in terms of design principles."
                     techUsed="HTML, CSS, Javascript."
-                    linkToCode="https://www.google.com"
+                    linkToCode="https://github.com/LifeofSwervo/Portfolio/tree/main/BistroCafe"
                 /> 
                 <ProjectsShowcase 
                     images={NinjaRunner}
@@ -69,7 +69,7 @@ const Projects = () => {
                     name="Ninja Runner"
                     description="This was a basic running game I made in pygame using python. This was my first attempt at my own game from scratch. I learned proper game loop structure, collision detection, and basic game mechanics. This was a fun project to work on and I learned a lot from it."
                     techUsed="Python, Pygame."
-                    linkToCode="https://www.google.com"
+                    linkToCode="https://github.com/LifeofSwervo/Portfolio/tree/main/Ninja%20Runner"
                 />
             </div>
             
