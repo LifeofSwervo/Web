@@ -6,9 +6,13 @@ import { useState } from "react";
 const TodoEntry = ({ onAddTodo }: any) => {
     const [input, setInput] = useState("");
 
+    /**
+     * - Handle Submit. Handles the submission of the todo list task. 
+     * @param e - Event. Form event.
+     */
     const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
-        e.preventDefault();
-        onAddTodo(input);
+        e.preventDefault(); // Stops form submission. 
+        onAddTodo(input); // Adds input to the todo list.
         setInput("");
     }
 
