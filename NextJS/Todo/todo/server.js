@@ -13,7 +13,7 @@ app.get("/todo", (req, res) => {
 
 // Adds todo
 app.post("/todo", (req, res) => {
-    res.send("Post request works")
+    res.json({ message: 'Post request works' });
 })
 
 app.listen(5000, () => {

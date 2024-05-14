@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 
-const TodoEntry = ({}: any) => {
+const TodoEntry = ({ todos, setTodos }: { todos: string[]; setTodos: (todos: string[]) => void; }) => {
     const [input, setInput] = useState("");
 
     const addTodo = (todo: string) => { // Defining a function called addTodo which takes a string parameter named todo
@@ -28,6 +28,7 @@ const TodoEntry = ({}: any) => {
           console.error('Error:', error);
         });
     };
+
     /**
      * - Handle Submit. Handles the submission of the todo list task. 
      * @param e - Event. Form event.

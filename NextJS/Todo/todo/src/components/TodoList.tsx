@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
 
-const TodoList = () => {
-    const [todos, setTodos] = useState<string[]>([]);
-
-
-
+const TodoList = ({ todos  }: { todos: string[]; }) => {
+    /*
     useEffect(() => {
         fetch("http://localhost:5000/todo") // Gets data from URL.
         .then(response => response.json()) // Converts response to JSON.
@@ -13,7 +10,7 @@ const TodoList = () => {
             console.error("Error: ", error);
         });
     }, []);
-    
+    */
     return (
         <div>
             {todos.map((todo: string, index: number) => ( // Iterates todo, assigns index to each item.
