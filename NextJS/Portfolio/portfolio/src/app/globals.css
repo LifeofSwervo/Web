@@ -35,3 +35,7 @@ main {
 .active {
   background-color: #F7D002;
 }
+
+body {
+  margin: 0;
+}
