@@ -6,6 +6,7 @@ interface ContactMethodProps {
     title: string;
     username: string;
     description: string;
+    link: string;
 }
 
 const gitHubStyle: React.CSSProperties = {
@@ -28,6 +29,11 @@ const usernameStyle: React.CSSProperties = {
     fontWeight: "lighter",
 }
 
+const linkStyle: React.CSSProperties = {
+    color: "white",
+    
+}
+
 const parentImageStyle: React.CSSProperties = {
     marginRight: '1em',
 }
@@ -46,7 +52,7 @@ const divStyle: React.CSSProperties = {
 }
 
 
-const ContactMethod: React.FC<ContactMethodProps> = ({title, image, description, username}) => {
+const ContactMethod: React.FC<ContactMethodProps> = ({title, image, description, username, link}) => {
     return (
         <div style={divStyle}>
             <div style={contactHeaderStyle}>
@@ -62,7 +68,7 @@ const ContactMethod: React.FC<ContactMethodProps> = ({title, image, description,
                 </div>
                 <h1 style={titleStyle}>{title}</h1>
             </div>
-            <h2 style={usernameStyle}>@{username}</h2>
+            <h2 style={usernameStyle}><a style={linkStyle} href={link}>{username}</a></h2>
             <p>{description}</p>
         </div>
     )

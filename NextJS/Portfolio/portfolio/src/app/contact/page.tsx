@@ -58,37 +58,43 @@ export default function Contact() {
             title="Github"
             image="/Logos/ContactLogos/github.svg"
             description="My GitHub is where I keep all of my projects and code snippets. If you want to see what I'm working on, check out my GitHub."
-            username="LifeOfSwervo"
+            username="@LifeOfSwervo"
+            link="https://github.com/LifeofSwervo"
           />
           <ContactMethod 
             title="LinkedIn"
             image="/Logos/ContactLogos/linkedIn.svg"
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
             username="Clarence Thomas"
+            link="https://www.linkedin.com/in/clarence-t-481920205"
           />
           <ContactMethod 
             title="Discord"
             image="/Logos/ContactLogos/discord.svg"
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
             username="Lifeofswervo"
+            link=""
           />
           <ContactMethod 
             title="YouTube"
             image="/Logos/ContactLogos/youtube.svg"
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-            username="placeholder"
+            username="Swervo Life"
+            link="https://www.youtube.com/channel/UCdZ2MBALCSVL-Zfn6upNbOw"
           />
           <ContactMethod 
             title="Twitter"
             image="/Logos/ContactLogos/twitter.svg"
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
-            username="Swervo_Life"
+            username="@Swervo_Life"
+            link=""
           />
           <ContactMethod 
             title="Email"
             image="/Logos/ContactLogos/email.svg"
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit."
             username="SwervoLife@gmail.com"
+            link="mailto:SwervoLife@gmail.com"
           />
         </div>
         <Footer />
