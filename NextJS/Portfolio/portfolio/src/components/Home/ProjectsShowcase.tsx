@@ -52,7 +52,7 @@ const rightColumnStyle: React.CSSProperties = {
 
 const informationStyle: React.CSSProperties = {
     alignItems: 'left',
-    
+    marginRight: '5vw',
 }
 
 const nameStyle: React.CSSProperties = {
