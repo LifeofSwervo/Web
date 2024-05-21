@@ -37,7 +37,7 @@ const NavBar = () => {
         listStyleType: "none",
         padding: '0.5%',
         overflow: "hidden",
-        margin: 'auto',
+        margin: 'auto 5em auto auto',
         alignItems: "center",
         display: "flex",
         flexDirection: "row",

@@ -87,7 +87,7 @@ export default function Contact() {
             image="/Logos/ContactLogos/twitter.svg"
             description="Follow me on Twitter to stay updated on my latest thoughts and projects. If you want to connect and see what I'm up to, check out my profile."
             username="@Swervo_Life"
-            link=""
+            link="https://x.com/Swervo_Life"
           />
           <ContactMethod 
             title="Email"
