@@ -57,7 +57,7 @@ export default function Contact() {
           <ContactMethod 
             title="Github"
             image="/Logos/ContactLogos/github.svg"
-            description="My GitHub is where I keep all of my projects and code snippets. If you want to see what I'm working on, check out my GitHub."
+            description="My GitHub is where I keep all of my projects and code snippets. If you want to see what I&#39;m working on, check out my GitHub."
             username="@LifeOfSwervo"
             link="https://github.com/LifeofSwervo"
           />
@@ -78,14 +78,14 @@ export default function Contact() {
           <ContactMethod 
             title="YouTube"
             image="/Logos/ContactLogos/youtube.svg"
-            description="Check out my YouTube channel to see my latest videos and tutorials. If you want to stay updated on what I’m creating, subscribe here"
+            description="Check out my YouTube channel to see my latest videos and tutorials. If you want to stay updated on what I&#39;m creating, subscribe here"
             username="Swervo Life"
             link="https://www.youtube.com/channel/UCdZ2MBALCSVL-Zfn6upNbOw"
           />
           <ContactMethod 
             title="Twitter"
             image="/Logos/ContactLogos/twitter.svg"
-            description="Follow me on Twitter to stay updated on my latest thoughts and projects. If you want to connect and see what I'm up to, check out my profile."
+            description="Follow me on Twitter to stay updated on my latest thoughts and projects. If you want to connect and see what I&#39;m up to, check out my profile."
             username="@Swervo_Life"
             link="https://x.com/Swervo_Life"
           />
