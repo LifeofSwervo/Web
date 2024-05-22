@@ -9,7 +9,7 @@ import Carousel from "../Carousel";
 import CarouselImages from "../Carousel/CarouselImages";
 import CarouselControls from "../Carousel/CarouselControls";
 import CarouselIndicators from "../Carousel/CarouselIndicator";
-import Link from "next/link";
+import "./ProjectsShowcase.css";
 
 const goldColor = '#F7D002'; 
 const mintGreenColor = '#D2FDFF';
@@ -83,12 +83,14 @@ const navigationDivStyle: React.CSSProperties = {
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
+    marginBottom: '10vh'
 }
 
 const descriptionStyle: React.CSSProperties = {
     marginBottom: '4em',
     lineHeight: '1.8em',
-    marginRight: '1.25em'
+    marginRight: '1.25em',
+
 }
 
 const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({images, images2, name, description, techUsed, linkToCode}) => {
@@ -156,9 +158,9 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({images, images2, nam
 
 
     return (
-        <div style={showcaseStyle}>
+        <div className="showcase">
             <div
-            style={leftColumnStyle}>
+            className="imageColumn">
                 <motion.div 
                 style={imageStyle}
                 whileHover={{ scale: 1.14 }}
