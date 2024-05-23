@@ -182,7 +182,7 @@ const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({images, images2, nam
             </div>
             <div style={informationStyle}>
                 <h2>{name}</h2>
-                <ul>
+                <ul className="projectDescription">
                     <li style={descriptionStyle}>{description}</li>
                     <li>{techUsed}</li>
                 </ul>

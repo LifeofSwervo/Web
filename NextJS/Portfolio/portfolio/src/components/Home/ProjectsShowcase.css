@@ -34,3 +34,13 @@
         margin: auto;
     }
 }
+
+.projectDescription {
+    list-style-type: circle;
+}
+
+@media (max-width: 900px) {
+    .projectDescription {
+        list-style-type: none;
+    }
+}
