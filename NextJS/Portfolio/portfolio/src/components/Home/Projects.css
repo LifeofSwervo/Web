@@ -1,0 +1,15 @@
+.projects {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    color: #D2FDFF;
+}
+
+@media (max-width: 900px) {
+    .projects {
+        margin: auto;
+        text-align: center;
+    }
+}
