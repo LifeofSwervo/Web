@@ -16,6 +16,7 @@ const footerStyle: React.CSSProperties = {
     color: 'white',
     borderTop: "2px solid #D2FDFF",
     zIndex: 4,
+    width: '100%',
 }
 
 const footerContentStyle: React.CSSProperties = {
