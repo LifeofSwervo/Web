@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payroll Information</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>Payroll Information</h1>
+    <button id="fetchData">Fetch Data</button>
+    <div id="data"></div>
+    <script>
+        document.getElementById('fetchData').addEventListener('click', function() {
+            axios.get('http://localhost:3000/data')
+                .then(function (response) {
+                    document.getElementById('data').innerText = JSON.stringify(response.data);
+                })
+                .catch(function (error) {
+                    console.log(error);
+                });
+        });
+    </script>
+</body>
+</html>
