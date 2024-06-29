@@ -124,7 +124,7 @@ const Introduction = () => {
         <div style={introStyle}>
             <canvas style={canvasStyle}></canvas>
             <h1 style={headingStyle}>Nameless Dev</h1>
-            <p style={textStyle}>I am Nameless Dev, an aspiring software engineer. This is my website. I am in college and working full time.</p>
+            <p style={textStyle}>I am Nameless Dev, a software engineer. This is my website. I am in college and working full time as a Mainframe Systems Developer currently.</p>
         </div>
     );
 }
